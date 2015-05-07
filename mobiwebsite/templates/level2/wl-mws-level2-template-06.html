@@ -1,0 +1,16 @@
+<body>
+	{{#each articles}}
+	<a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+	<div class="row category_row wltpl_font_32">
+		<div class="wltpl_font_ratio categroy_shadow">
+			<div class="cover">
+				<div class="Picimg_material_preview" wltpl_data='{"ratio":1.57}'><img src="{{coverUrl}}"><span></span></div>
+			</div>
+			<div class="category_padding category_padding_bottom">
+				{{title}}
+			</div>
+		</div>
+	</div>
+	</a>
+	{{/each}}
+</body>

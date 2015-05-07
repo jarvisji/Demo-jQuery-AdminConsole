@@ -1,0 +1,53 @@
+{
+	"slide": [
+		{
+			"title": "咖啡模板",
+			"imageUrl": "images/slide-1.png",
+			"targetUrl": "#"
+		}
+	],
+	"category": [
+		{
+			"title": "香浓咖啡",
+			"imageUrl": "images/category01.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "特色推荐",
+			"imageUrl": "images/category02.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "美味食品",
+			"imageUrl": "images/category03.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "活动预约",
+			"imageUrl": "images/category04.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "会员特权",
+			"imageUrl": "images/category05.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "咖啡学堂",
+			"imageUrl": "images/category06.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "活动预约",
+			"imageUrl": "images/category04.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "会员特权",
+			"imageUrl": "images/category05.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "咖啡学堂",
+			"imageUrl": "images/category06.jpg",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"dail": "0551-4428528",
+		"siteDesc": "咖啡模板@2014",
+		"wlSupportInfo": "demo提供技术支持"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"category": [
+		{
+			"title": "产品展示",
+			"imageUrl": "images/category01.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "企业品牌",
+			"imageUrl": "images/category02.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "技术规格",
+			"imageUrl": "images/category03.jpg",
+			"targetUrl": "#"
+		}, {
+			"title": "会员故事",
+			"imageUrl": "images/category04.jpg",
+			"targetUrl": "#"
+		}
+		, {
+			"title": "立即预定",
+			"imageUrl": "images/category05.jpg",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "",
+		"wlSupportInfo": "",
+		"pageBgImageUrl": "images/homebgimage.jpg"
+	}
+}

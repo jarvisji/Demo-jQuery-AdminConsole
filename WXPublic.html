@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 微信公众号</title>
+        <meta name="description" content="demo（freecoder）- 微信公众号" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+        
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <!--header公共部分代码-->
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container" id="main-container">
+            <div class="main-container-inner">
+                <!--content部分内容-->
+                <div class="page-content">
+                    <div class="page-header">
+                        <h1>微信公众号信息 </h1>
+                    </div><!-- /.page-header -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <div class="alert alert-block alert-success hidden">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <i class="icon-remove"></i>
+                                </button>
+                                <i class="icon-ok green"></i>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <form class="form-horizontal" role="form" id="pubAccountForm" method="post" action="./php/fileUpload.php?action=WxAccountAvatarUpload">
+                                        <div class="form-group" style="margin-top:30px;">
+                                            <label class="col-sm-3 control-label no-padding-right"> 公众号名称 <span class="red">*</span> </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="name" name="name" placeholder="" class="col-xs-10 col-sm-5" />
+                                                <span class="help-inline col-xs-12 col-sm-7"> <label for="name" class="help-block"></label> </span>
+                                            </div>
+                                        </div>
+                                        <div class="space-4"></div>
+                                        <input  type="hidden" class="col-xs-10 col-sm-5" name="wlsUserId" />
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 头像 </label>
+                                            <input type="hidden" id="avatar" name="avatar">
+                                            <div  id="imgshow" class="col-sm-9" style="width:300px;">
+                                                <input type="file" name="fileUploader" id="fileUploader" />
+                                            </div>
+                                        </div>
+                                        <div class="space-4" id=""></div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 所属地区 </label>
+                                            <label for="province" class="help-block"></label>
+                                            <label for="city" class="help-block"></label>
+                                            <div class="col-sm-9">
+                                                <div class="col-sm-2" style="margin-left:-12px;">
+                                                    <select class="form-control" id="province" name="province">
+                                                        <option class="Province" value="">--请选择省份--</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-2" style="margin-left:-12px;">
+                                                    <select class="form-control" id="city" name="city">
+                                                        <option class="City" value="">--请选择区域--</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-sm-2" style="margin-left:-12px;">
+                                                    <select class="form-control" id="area" name="area">
+                                                        <option class="area" value="">--请选择区域--</option>
+                                                    </select>
+                                                </div>
+                                                <div class="help-inline"></div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 联系邮箱 </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="col-xs-10 col-sm-5" id="email" name="email" />
+                                                <span class="help-inline col-xs-12 col-sm-7"> <label for="email" class="help-block"></label> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 联系人 </label>
+                                            <div class="col-sm-9">
+                                                <input  type="text" class="col-xs-10 col-sm-5" id="contactName" name="contactName" />
+                                                <span class="help-inline col-xs-12 col-sm-7"> <label for="contactName" class="help-block"></label> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 联系电话 </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="col-xs-10 col-sm-5" id="contactPhone" name="contactPhone" />
+                                                <span class="help-inline col-xs-12 col-sm-7"> <label for="contactPhone" class="help-block"></label> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label no-padding-right"> 服务行业 </label>
+                                            <div class="col-sm-9">
+                                                <div class="col-sm-5" style="margin-left:-12px;">
+                                                    <select class="form-control" name="industry">
+                                                        <option value="">请选择所属于行业</option>
+                                                        <option value="AL">建筑</option>
+                                                        <option value="AK">酒店</option>
+                                                        <option value="AZ">商城</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-4"></div>
+                                        <div class="clearfix form-actions">
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button class="btn btn-info" type="button" id="btnSubmit">
+                                                    <i class="icon-ok bigger-110"></i>保存
+                                                </button>
+                                                <button class="btn" type="button" id="btnReturn">
+                                                    <i class="icon-undo bigger-110"></i>返回
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /row -->
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+    </body>
+</html>

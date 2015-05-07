@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>freecoder</title>
+        <meta name="description" content="overview &amp; stats" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <style>
+			.statsinfo-box-outer {
+				margin: 10px 20px;
+				text-align: center;
+			}
+			.statsinfo-box {
+				width: 250px;
+				margin: 2px;
+				border: 1px dotted;
+				border-color: #d8d8d8 !important;
+				padding: 25px 35px;
+				display: inline-block;
+			}
+			.statsinfo-icon {
+				text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+				vertical-align: middle;
+			}
+			.statsinfo-content {
+				color: #555;
+			}
+        </style>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>概况及统计</h1>
+                        </div><!-- /.page-header -->
+                        <!-- PAGE CONTENT STARTS -->
+                        <div id="alertPlaceHolder"></div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="widget-box transparent" id="recent-box">
+                                    <div class="widget-header">
+                                        <h4 class="lighter smaller"><i class="icon-rss orange"></i> 最新统计数据 </h4>
+                                        <div class="widget-toolbar no-border">
+                                            <ul class="nav nav-tabs" id="recent-tab">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#day-tab">日</a>
+                                                </li>
+
+                                                <li>
+                                                    <a data-toggle="tab" href="#week-tab">周</a>
+                                                </li>
+
+                                                <li>
+                                                    <a data-toggle="tab" href="#month-tab">月</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main padding-4">
+                                            <div class="tab-content padding-8 overflow-visible">
+                                                <div id="day-tab" class="tab-pane active">
+                                                    <!--本日最新统计-->
+                                                </div>
+
+                                                <div id="week-tab" class="tab-pane">
+                                                    <!--本周最新统计-->
+                                                </div><!-- week-tab -->
+
+                                                <div id="month-tab" class="tab-pane">
+                                                    <!--本月最新统计-->
+                                                </div>
+                                            </div>
+                                        </div><!-- /widget-main -->
+                                    </div><!-- /widget-body -->
+                                </div><!-- /widget-box -->
+                                <!-- PAGE CONTENT ENDS -->
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+        <script id="wxAccountStatsTemplate" type="text/html">
+            <div class="row">
+            <div class="col-md-12 statsinfo-box-outer">
+            <div class="statsinfo-box">
+            <div class="statsinfo-icon green">
+            <i class="icon-user icon-5x"></i>
+            <span class="icon-3x" data-content="subscribeCount"></span>
+            </div>
+            <div class="statsinfo-content bigger-125">
+            <strong>新增关注</strong>
+            </div>
+            </div>
+            <div class=" statsinfo-box">
+            <div class="statsinfo-icon green">
+            <i class="icon-group icon-5x"></i>
+            <span class="icon-3x" data-content="subscribeTotalCount"></span>
+            </div>
+            <div class="statsinfo-content bigger-125">
+            <strong>关注总数</strong>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 statsinfo-box-outer">
+            <div class=" statsinfo-box">
+            <div class="statsinfo-icon red">
+            <i class="icon-user icon-5x"></i>
+            <span class="icon-3x" data-content="unsubscribeCount"></span>
+            </div>
+            <div class="statsinfo-content bigger-125">
+            <strong>取消关注</strong>
+            </div>
+            </div>
+            <div class=" statsinfo-box">
+            <div class="statsinfo-icon blue">
+            <i class="icon-comment icon-5x"></i>
+            <span class="icon-3x" data-content="textCount"></span>
+            </div>
+            <div class="statsinfo-content bigger-125">
+            <strong>收到消息</strong>
+            </div>
+            </div>
+            </div>
+            </div>
+        </script>
+    </body>
+</html>

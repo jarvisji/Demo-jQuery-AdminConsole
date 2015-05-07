@@ -1,0 +1,82 @@
+.wltpl_font_30 {
+	font-size: 30px;
+}
+.wltpl_container {
+	width: 100%;
+	margin: 0px;
+	background-color: #ff00ff;
+}
+
+a, a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.wltpl_item {
+	/*margin-top:2%;*/
+	margin-top: 4%;
+	float: left;
+}
+
+.wltpl_item.wltpl_item_top {
+	margin-top: 0px;
+}
+
+.wltpl_item.wltpl_item_col_1 {
+	width: 100%;
+}
+
+.wltpl_item.wltpl_item_col_3 {
+	width: 33.3333%;
+	text-align: center;
+}
+
+.wltpl_item_col_2_sm {
+	width: 33%;
+	text-align: center;
+}
+
+.wltpl_item_col_2_lg {
+	width: 65%;
+	overflow-y: hidden; /* for image */
+	text-align: center;
+}
+.wltpl_item_col_2_lg img {
+	width: 100%;
+}
+
+.wltpl_category_circle {
+	width: 80%;
+	height: 80%;
+	margin-left: auto; /* align center */
+	margin-right: auto;
+	border-radius: 50%;
+	 padding-top: 19%; /*padding-top and padding-bottom make only hold 40% space in middle, like vertical align is middle. */
+	 padding-bottom: 24%; /* 24% = 100% * 80% * 30% */
+	text-align: center;
+	color: #fff;
+}
+
+.wltpl_category_square {
+	height: 100%;
+	padding-top: 25%;
+	text-align: center;
+}
+
+.carousel img {
+	width: 100%;
+}
+
+.wltpl_footer {
+	width: 100%;
+	color: #000;
+}
+.wltpl_category_title {
+	margin-left: 10%;
+	text-align: center;
+	margin-top: 2px;
+	width: 80%;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+}

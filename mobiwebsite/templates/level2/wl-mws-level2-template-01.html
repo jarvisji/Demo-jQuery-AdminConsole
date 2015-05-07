@@ -1,0 +1,33 @@
+<body>
+
+    {{#each articles}}
+    <a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+    <div class="row category_row categroy_radius wltpl_font_32" >
+        <div class="category_padding wltpl_font_ratio">
+            <div>
+                {{title}}
+            </div>
+            <br/>
+            <div class="small text_color_gray">
+                {{appLastModifyTime}}
+            </div>
+            <br/>
+            <div class="cover">
+                <div class="Picimg_material_preview" wltpl_data='{"ratio":2.54}'><img src="{{coverUrl}}"><span></span>
+                </div>
+            </div>
+            <br/>
+            <div class="small text_color_gray">
+                {{summary}}
+            </div>
+            <br/>
+            <div class="category_border_bottom"></div>
+            <br/>
+            <div class="small">
+                查看更多
+            </div>
+        </div>
+    </div> </a>
+    {{/each}}
+
+</body>

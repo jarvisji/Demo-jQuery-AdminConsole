@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 单图文信息</title>
+        <meta name="description" content="demo（freecoder）- 单图文信息" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- basic styles -->
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/ace-fonts.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+        <link rel="stylesheet" href="umeditor/themes/default/css/umeditor.css" />
+
+        <!-- inline styles related to this page -->
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1> 单图文素材 </h1>
+                            <div class="wl-header-search">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"   data-backdrop="static" data-target="#modalAdd">
+                                            <i class="icon-new"></i>新增
+                                        </button> &nbsp;</span>
+                                    <input type="text" class="form-control" id="searchValue" placeholder="搜索" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" id="search">
+                                            <i class="icon-new"></i><span>搜索</span>
+                                        </button> &nbsp;</span>
+                                    <span class="input-group-btn"> <div data-type="wl-tags-button"></div></span>
+                                </div>
+                            </div>
+                        </div><!-- /.page-header -->
+                        
+                        <div id="alertPlaceHolder"></div>
+
+                       <div id="listContainer"></div>
+                    </div><!-- /.page-content -->
+
+                    <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog dialog-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">编辑单图文素材</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <form class="form-horizontal" id="formSingle" role="form" method="post" action="./php/fileUpload.php">
+                                                <div class="col-sm-6">
+                                                    <div class="form_bg">
+                                                        <div class="form-group">
+                                                            <label for="title" class="help-block">标题<small class="red">*</small></label>
+															<input type="text" id="title" name="title" placeholder="必填，不超过64个字" class="col-xs-12 col-md-12 col-sm-6" />
+                                                            <div class="help-inline"></div>
+                                                        </div>
+                                                        <div class="space-2"></div>
+                                                        <div class="form-group">
+                                                            <label for="author" class="help-block">作者</label>
+															<input type="text" id="author" placeholder="可选，不超过10个字" name="author" class="col-md-12" />
+															<div class="help-inline"></div>
+                                                        </div>
+                                                        <div class="space-2"></div>
+                                                        <div class="form-group">
+															<label for="fileSingle" class="help-block">封面图片<small class="red">*</small>(必填，图片建议尺寸360x200像素)</label>
+                                                            <input type="text" name="coverUrl" id="coverUrlSingle" class="hidden" />
+                                                            <input type="file" name="fileUploader" id="fileSingle" />
+                                                            <div class="help-inline"></div>
+                                                        </div>
+                                                        <div class="space-2"></div>
+                                                        <div class="form-group">
+                                                            <label for="summary" class="help-block">摘要<small class="red">*</small></label>
+															<textarea id="summary" name="summary" placeholder="必填，不超过120个字" rows="3" class="form-control"></textarea>
+                                                            <div class="help-inline"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form_bg">
+                                                        <div class="space-2"></div>
+                                                        <div class="form-group">
+															<label for="editorSingle" class="help-block">正文（可选，不超过20000个字符）</label>
+															<script id="editorSingle"  name="content" type="text/plain"></script>
+															<div class="help-inline"></div>
+                                                        </div>
+                                                        <div class="space-2"></div>
+                                                        <div class="form-group">
+															<label for="externalUrl" class="help-block">外链地址(可选，设置后点击图文消息，不会进入图文详情，而进入外链所设地址)</label>
+                                                            <input type="text" id="externalUrl" name="externalUrl" class="col-md-12"  />
+                                                            <div class="help-inline"></div>
+                                                        </div>
+                                                        <div class="space-2"></div>
+                                                        <input type="text" name="id" class="hidden" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        <span>关闭</span>
+                                    </button>
+                                    <button  id="btnSingleSubmit" type="button" class="btn btn-primary">
+                                        <span>保存</span>
+                                    </button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+         
+                 <!-- this is a article modal window    -->
+				 <div class="modal fade" id="article" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" width="320px" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title" id="myModalLabel">浏览文章</h4>
+				      </div>
+				      <div class="modal-body">
+				      	<div class="row">
+                        <div class="col-md-offset-3">
+				          <iframe id="showArticle" width="320px" height="600px"  frameborder="0"  ></iframe>
+				        </div>
+				        </div>
+				      </div>
+				     
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+               <!-- end article  moeal  -->
+
+
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+    </body>
+</html>

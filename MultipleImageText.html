@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 多图文素材</title>
+        <meta name="description" content="demo（freecoder）- 多图文素材" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- basic styles -->
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/ace-fonts.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+        <link rel="stylesheet" href="umeditor/themes/default/css/umeditor.css" />
+
+        <!-- inline styles related to this page -->
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <!--menu star-->
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>多图文素材</h1>
+                            <div class="wl-header-search">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button id="btnAddMit" class="btn btn-primary btn-sm">
+                                            <i class="icon-new"></i><span>新增</span>
+                                        </button> &nbsp;</span>
+                                    <input type="text" class="form-control"  id="searchValue" placeholder="搜索" />
+                                     <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" id="search">
+                                            <i class="icon-new"></i><span>搜索</span>
+                                        </button> &nbsp;</span>
+                                </div>
+                            </div>
+                        </div><!-- /.page-header -->
+                        <div id="alertPlaceHolder"></div>
+
+                        <div id="listContainer"></div>
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog dialog-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">编辑多图文素材</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- editor preview -->
+                                <div class="mit_preview_container">
+                                    <ul class="ace-thumbnails" id="mitEditorPreviewItemList">
+                                        <!-- insert items here -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form_bg">
+                                    <form class="form-horizontal" id="formMultiple" role="form" method="post" action="./php/fileUpload.php">
+                                        <div class="form-group">
+                                            <label for="title" class="help-block">标题<small class="red">*</small></label>
+                                            <input type="text" name="title" placeholder="必填，不超过64个字" class="col-md-12" />
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="space-2"></div>
+                                        <div class="form-group">
+                                            <label for="author" class="help-block">作者</label>
+                                            <input type="text" name="author" placeholder="选填，不超过10个字"  class="col-md-12" />
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="space-2"></div>
+                                        <div class="form-group">
+                                            <label for="fileMultiple" class="help-block">封面<small class="red">*</small>(必填，图片建议尺寸360x200像素)</label>
+                                            <input type="text" name="coverUrl" id="coverUrlMultiple" class="hidden"/>
+                                            <input type="file" name="fileUploader" id="fileMultiple"/>
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="space-2"></div>
+                                        <div class="form-group">
+                                            <label for="editorMultiple" class="help-block">正文(可选，不超过20000个字符)</label>
+                                            <script id="editorMultiple" name="content" type="text/plain"></script>
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="space-2"></div>
+                                        <div class="form-group">
+                                            <label>外部链接（可选，设置后点击图文消息，不会进入图文详情，而进入外链所设地址。）</label>
+                                            <input type="text" name="externalUrl" class="col-md-12" />
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="space-2"></div>
+                                        <input type="text" name="summary" class="hidden" value=""/>
+                                        <button class="btn btn-block btn-success" type="button" id="btnMitSave">
+                                            <i class="icon-ok bigger-110"></i>保存
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <script type="text/html" id="mitEditorPreviewFirstItemTemplate">
+            <li class="thumbnail_GM_first no-bottomline" data-type="mitItem" data-template-bind='[{"attribute":"id", "value":"id"}]'>
+            <a href="#" name="aEditMitItem">
+            <div class="img_material_preview">
+            <i class="mit_item_thumb">封面图片</i>
+            <img class="hidden" data-template-bind='[{"attribute":"src", "value":"coverUrl"}]'/>
+            </div>
+            <div class="text">
+            <div class="inner">
+            <i class="icon-pencil bigger-250"></i>
+            </div>
+            </div>
+            <div class="tools-img tools-bottom-img">
+            <span data-content="title" data-format="htmlEncodeFormatter"></span>
+            </div>
+            </a>
+            </li>
+        </script>
+        <script type="text/html" id="mitEditorPreviewSecondaryItemTemplate">
+            <li class="mit_preview_item_second no-bottomline" data-type="mitItem" data-template-bind='[{"attribute":"id", "value":"id"}]'>
+            <div class="itemContainer">
+            <div class="pull-left">
+            <span data-content="title" data-format="htmlEncodeFormatter"></span>
+            </div>
+            <div class="pull-right">
+            <i class="mit_item_thumb">缩略图</i>
+            <img class="hidden" data-template-bind='[{"attribute":"src", "value":"coverUrl"}]'/>
+            </div>
+            <div class="text">
+            <div class="inner">
+            <a href="#" name="aEditMitItem" click="editMitPreviewItem();">
+            <i class="icon-pencil icon-2x"></i></a>
+            &nbsp;
+            <a href="#" name="aDeleteMitItem">
+            <i class="icon-trash icon-2x"></i></a>
+            </div>
+            </div>
+            </div>
+            </li>
+        </script>
+        <script type="text/html" id="mitEditorPreviewBottomTemplate">
+            <div id="mitEditorPreviewSecondaryItemInsertPlaceHolder"></div>
+            <li class="thumbnail_GM_bottom">
+            <a href="#" id="aAddSecondItem">
+            <div>
+            <i class="icon-plus icon-2x icon-muted"></i>
+            </div></a>
+            </li>
+        </script>
+    </body>
+</html>

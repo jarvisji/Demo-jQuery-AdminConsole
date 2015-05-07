@@ -1,0 +1,30 @@
+{
+	"slide": [],
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate",
+				"applyTo": "*",
+				"styleIndex": 0
+			}
+		],
+		"style": [
+			{
+				"layoutClass": "wltpl_item_col_3"
+			}
+		]
+	},
+	"footer": {
+		"template": [
+			{
+				"name": "dail",
+				"id": "phoneTemplate",
+				"parentContainer": "[name='category']"
+			}
+		],
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e4e4e4"
+		}
+	}
+}

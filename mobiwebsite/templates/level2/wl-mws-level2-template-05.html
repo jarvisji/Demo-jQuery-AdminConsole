@@ -1,0 +1,18 @@
+<body>
+
+	{{#each articles}}
+	<a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+	<div class="row category_row category_border_bottom wltpl_font_32">
+		<div class="wltpl_font_ratio">
+			<div class="content_title text_overflow pull-left space_padding">
+				{{title}}
+			</div>
+			<div class="pull-right space_padding" style="color:#ccc;">
+				<i class="wltpl_alignment_category_icon icon-chevron-right"></i>
+			</div>
+           
+		</div>
+	</div>
+	</a>
+	{{/each}}
+</body>

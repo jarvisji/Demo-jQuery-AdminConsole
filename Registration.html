@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>demo（freecoder）- 注册</title>
+		<meta name="description" content="demo（freecoder）- 注册"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/lib/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/lib/ace.min.css"/>
+
+		<link rel="stylesheet" href="css/freecoder.css"/>
+		<link rel="stylesheet" href="css/mylogin.css"/>
+		<script data-main="scripts/main" src="scripts/require.js"></script>
+		<style>
+			/* In this page, we want alert text align to bottom of parent box without margin. */
+			.alert {
+				margin-bottom: 0px;
+			}
+		</style>
+	</head>
+
+	<body class="login-layout">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="login-container">
+							<!-- /signup-box -->
+							<div class="center">
+								<h1><img src="images/logo.png"/></h1>
+							</div>
+
+							<div class="space-6"></div>
+
+							<div class="position-relative">
+								<div class="login-box visible widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header green lighter bigger">用户注册 </h4>
+
+											<form id="registration">
+												<fieldset>
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="text" class="form-control"
+																placeholder="电子邮件" name="email" id="email"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="password" class="form-control"
+																placeholder="密码" name="password" id="password"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="password" class="form-control"
+																placeholder="重复密码" name="passwordAgain"
+																id="passwordAgain"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<h4 class="header green lighter bigger"></h4>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="text" class="form-control"
+																placeholder="姓名" name="fullName"
+																id="fullName"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="text" class="form-control" placeholder="手机"
+																name="mobilePhone" id="mobilePhone"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="text" class="form-control" placeholder="QQ"
+																name="qq" id="qq"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix">
+															<div class="row block input-icon input-icon-right">
+																<div class="col-sm-4">
+																	<select class="form-control" id="province"
+																	name="province">
+																		<option class="Province" value=""> 省份 </option>
+																	</select>
+																</div>
+																<div class="col-sm-4">
+																	<select class="form-control" id="city"
+																	name="city">
+																		<option class="City" value="">城市 </option>
+																	</select>
+																</div>
+
+																<div class="col-sm-4">
+																	<select class="form-control" id="area"
+																	name="area">
+																		<option class="area" value="">区县 </option>
+																	</select>
+																</div>
+															</div> <div class="help-inline"></div> </label>
+													</div>
+
+													<div class="form-group">
+														<label class="block clearfix"> <span class="block input-icon input-icon-right">
+																<input type="text" class="form-control"
+																placeholder="行业信息，如餐饮、超市。"
+																name="industry" id="industry"/>
+															</span> <div class="help-inline"></div> </label>
+													</div>
+													
+													<div class="form-group clearfix" style="margin-top:-10px;">
+														<label class="inline">
+															 <input type="checkbox" class="ace" id="checkbox" name="checkbox"/>
+															 <span class="lbl"> 我已阅读并接受<a href="#">《demo微平台用户协议》 </a></span> 
+														     <div class="help-inline"></div>
+														</label>
+													</div>
+													
+													<div class="clearfix">
+														<button type="button" id="btnSave" ng-disabled="form.$invalid" 
+														class="btn btn-block btn-sm btn-success">
+															<span>用户注册</span>
+															<i class="icon-arrow-right icon-on-right"></i>
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+										<!-- /widget-main -->
+										<div id="alertPlaceHolder" class="toolbox clearfix"></div>
+									</div>
+									<!-- /widget-body -->
+								</div>
+								<!-- /login-box -->
+							</div>
+							<!-- /position-relative -->
+						</div>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+		</div>
+		<!-- /.main-container -->
+	</body>
+
+</html>

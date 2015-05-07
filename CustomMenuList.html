@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>demo（freecoder）- 自定义菜单</title>
+		<meta name="description" content="demo（freecoder）- 自定义菜单" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href="css/lib/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/lib/ace.min.css" />
+		<script data-main="scripts/main" src="scripts/require.js"></script>
+	</head>
+
+	<body>
+		<!--header公共部分代码 star-->
+		<div id="headerPlaceHolder"></div>
+		<!--header公共部分代码 end-->
+
+		<div class="main-container" id="main-container">
+			<div class="main-container-inner">
+
+				<!--menu公共部分代码 star-->
+				<div id="menuPlaceHolder"></div>
+				<!--menu公共部分代码 end-->
+
+				<!--content部分内容-->
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="Index.html" >首页</a>
+							</li>
+							<li class="active">
+								控制面板
+							</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i> </span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1> 自定义菜单 </h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="alert alert-block alert-danger">
+									<button type="button" class="close" data-dismiss="alert">
+										<i class="icon-remove"></i>
+									</button>
+
+									<i class="icon-ok red"></i>
+									<strong class="red"> 注意： </strong>
+									1级菜单最多只能开启3个，2级子菜单最多开启5个
+									需要公众号的APPID和APPSECRET产生access_token才能管理菜单
+								</div>
+
+								<div class="row">
+
+									<div class="col-xs-6">
+
+										<div class="dd dd-draghandle">
+											<ol class="dd-list">
+
+												<li class="dd-item dd2-item" data-id="14">
+													<div class="dd-handle dd2-handle">
+														<i class="normal-icon icon-time pink bigger-130"></i>
+
+														<i class="drag-icon icon-move bigger-125"></i>
+													</div>
+													<div class="dd2-content">
+														Recent Posts
+
+														<div class="pull-right action-buttons">
+
+															<a class="green" href="#"> <i class="normal-icon icon-plus bigger-130"></i> </a>
+
+															<a class="blue" href="#"> <i class="icon-pencil bigger-130"></i> </a>
+
+															<a class="red" href="#"> <i class="icon-trash bigger-130"></i> </a>
+														</div>
+
+													</div>
+												</li>
+
+												<li class="dd-item dd2-item" data-id="15">
+													<div class="dd-handle dd2-handle">
+														<i class="normal-icon icon-signal orange bigger-130"></i>
+
+														<i class="drag-icon icon-move bigger-125"></i>
+													</div>
+													<div class="dd2-content">
+														Statistics
+													</div>
+
+													<ol class="dd-list">
+														<li class="dd-item dd2-item" data-id="16">
+															<div class="dd-handle dd2-handle">
+																<i class="normal-icon icon-user red bigger-130"></i>
+
+																<i class="drag-icon icon-move bigger-125"></i>
+															</div>
+															<div class="dd2-content">
+																Active Users
+
+																<div class="pull-right action-buttons">
+
+																	<a class="green" href="#"> <i class="normal-icon icon-plus bigger-130"></i> </a>
+
+																	<a class="blue" href="#"> <i class="icon-pencil bigger-130"></i> </a>
+
+																	<a class="red" href="#"> <i class="icon-trash bigger-130"></i> </a>
+																</div>
+
+															</div>
+														</li>
+
+													</ol>
+												</li>
+
+											</ol>
+										</div>
+
+									</div>
+
+									<div class="col-xs-6">
+
+										<form class="form-horizontal" role="form">
+
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right" for="form-field-1">菜单名</label>
+
+												<div class="col-sm-9">
+													<input type="text" id="form-field-1" placeholder="Recent Posts" class="col-xs-10 col-sm-5" />
+												</div>
+											</div>
+
+											<div class="space-4"></div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 触发类别</label>
+
+												<div class="col-sm-9">
+
+													<input name="form-field-radio" type="radio" class="ace" />
+													<span class="lbl">关键字</span>
+
+													<input name="form-field-radio" type="radio" class="ace" />
+													<span class="lbl"> 外部链接</span>
+
+												</div>
+											</div>
+
+											<div class="space-4"></div>
+
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right" for="form-field-2">关键字 </label>
+
+												<div class="col-sm-9">
+													<input type="text" id="form-field-2" placeholder="好好学习" class="col-xs-10 col-sm-5" />
+													<span class="help-inline col-xs-12 col-sm-7"> <span class="middle red">对不起，你输入的关键字不合法。</span> </span>
+												</div>
+											</div>
+
+											<div class="space-4"></div>
+
+											<div class="clearfix">
+												<div class="col-md-offset-3 col-md-9">
+													<button class="btn btn-info" type="button">
+														<i class="icon-ok bigger-110"></i>
+														保存
+													</button>
+												</div>
+											</div>
+
+										</form>
+
+									</div>
+
+								</div><!-- /row -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"> <i class="icon-double-angle-up icon-only bigger-110"></i> </a>
+		</div><!-- /.main-container -->
+
+	</body>
+</html>

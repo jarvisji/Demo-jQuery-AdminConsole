@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 移动官网设置</title>
+        <meta name="description" content="demo（freecoder），专业微信公众号服务平台" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- basic styles -->
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace-fonts.css" />
+        <link rel="stylesheet" href="css/lib/jquery-ui-1.10.3.full.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/jquery.rondell.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <link rel="stylesheet" href="css/MwsWizard.css" />
+
+        <!-- mobilewebsite style -->
+        <link rel="stylesheet" href="mobiwebsite/css/wlMwsTemplate.css" />
+
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <!-- menu -->
+                <div id="menuPlaceHolder"></div>
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1></h1>
+                        </div><!-- /.page-header -->
+
+                        <div id="alertPlaceHolder" class="alert alert-block alert-danger hidden">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <i class="icon-remove"></i>
+                            </button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-blue widget-header-flat">
+                                        <h4 class="lighter"> 移动官网设置向导</h4>
+
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div id="templateListContainer">
+                                                <h3 class="lighter block green">模板列表</h3>
+                                                <div id="rondellThumbnails"></div>
+                                                <div class="space-10"></div>
+                                                <div class="alert alert-info">
+                                                    <button type="button" class="close" data-dismiss="alert">
+                                                        <i class="icon-remove"></i>
+                                                    </button>
+                                                    <p>
+                                                        <strong> 说明： </strong>
+                                                        <br>
+                                                        <span id="spanSelectedTemplateDesc"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="row wizard-actions">
+                                                    <div class="col-xs-12">
+                                                        <!-- @formatter:off -->
+                                                        <button class="btn btn-prev" onclick="javascript:window.history.back();">
+                                                            <i class="icon-arrow-left"></i>返回
+                                                        </button>
+                                                        <button id="btnBuildWizard" class="btn btn-success btn-next">确定
+                                                            <i class="icon-arrow-right icon-on-right"></i>
+                                                        </button>
+                                                     
+                                                        <!-- @formatter:on -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="wizardContainer" class="hidden">
+                                                <div id="templateWizard" class="row" data-target="#step-container">
+                                                    <ul id="stepLableContainer" class="wizard-steps">
+
+                                                    </ul>
+                                                </div>
+                                                <hr />
+
+                                                <div class="step-content row position-relative" id="step-container">
+                                                    <div id="iphonePreviewContainer" class="col-xs-4 hidden">
+                                                        <div id="divIphonePreview" style="position:relative;width:310px">
+                                                            <img src="images/iphone5s_gold.jpg" style="width:100%">
+                                                            <div id="divIphonePreviewContent" style="width: 254px; height: 394px; position: absolute; top: 144px; left: 28px; overflow-y: hidden">
+                                                                <!--<img src="images/mobilewebsite_template_07.jpg"
+                                                                style="width:100%">-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="stepContentContainer" class="col-xs-12">
+
+                                                        <!-- The other step-panes are build from template -->
+
+                                                    </div>
+                                                </div>
+
+                                                <hr />
+                                                <div class="row wizard-actions">
+                                                    <div class="col-xs-12">
+                                                        <!-- @formatter:off -->
+                                                        <button class="btn btn-primary" id="btnSelectTemplate">
+                                                            <i class="icon-arrow-up"></i>重选模板
+                                                        </button>
+                                                        <button class="btn btn-prev">
+                                                            <i class="icon-arrow-left"></i>上一步
+                                                        </button>                                                    
+                                                        <button class="btn btn-success btn-next" data-last="Finish">下一步
+                                                            <i class="icon-arrow-right icon-on-right"></i>
+                                                        </button>
+                                                        <!-- @formatter:on -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- / row -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/html" id="wizardStepLableTemplate">
+            <li data-template-bind='[{"attribute":"data-target", "value":"stepName", "formatter":"valueFormatter", "formatOptions":{"prefix":"#step_"}}]'>
+            <span class="step" data-content="stepNumber"></span>
+            <span class="title" data-content="stepTitle"></span>
+            </li>
+        </script>
+
+        <script type="text/html" id="wizardStepContentTemplate">
+            <div class="step-pane" data-template-bind='[{"attribute":"id", "value":"stepName", "formatter":"valueFormatter", "formatOptions":{"prefix":"step_"}}]'>
+            <div class="widget-box transparent">
+            <div class="widget-header widget-header-small">
+            <h5 class="blue smaller"><b><span data-content="fieldSetTitle" /></b></h5>
+
+            <div class="widget-toolbar action-buttons btn-group">
+            <button class="btn btn-sm btn-info" name="btnAddFieldSet" data-template-bind='[{"attribute":"stepName", "value":"stepName"}]'> <i class="icon-plus orange bigger-120"></i> </button>
+            <button class="btn btn-sm btn-info" name="btnTogglePreview"> <i class="icon-mobile-phone bigger-120"></i> </button>
+            </div>
+            </div>
+
+            <div class="widget-body">
+            <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">
+            <i class="icon-remove"></i>
+            </button>
+            <p>
+            <span data-content="stepDesc"></span>
+            </p>
+            </div>
+
+            <form id="stepForm" class="form-horizontal" role="form">
+            <div id="formContainer"></div>
+
+            </div>
+
+            </form>
+            </div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="actionButtons_save_return">
+            <!-- form action -->
+            <div class="form-actions center">
+            <button type="button" name="cancel" class="btn btn-sm btn-light">
+            <i class="icon-arrow-left bigger-110"></i><span>返回</span>
+            </button>
+            <button type="button" name="save" class="btn btn-sm btn-success">
+            <span>保存</span>
+            <i class="icon-arrow-right icon-on-right bigger-110"></i>
+            </button>
+            </div>
+        </script>
+
+        <script type="text/html" id="actionButtons_edit_delete">
+            <div class="tools action-buttons">
+            <a href="#" name="aEditFieldSet" class="blue"> <i class="icon-pencil bigger-150"></i> </a>
+            <a href="#" name="aDeleteFieldSet" class="red"> <i class="icon-remove bigger-160"></i> </a>
+            </div>
+        </script>
+
+        <script type="text/html" id="fieldSet_fieldsContainer">
+            <div name="fieldSet" class="wizard-item clearfix" data-template-bind='[{"attribute":"id", "value":"id"},{"attribute":"data-fieldsetid", "value":"fieldSetId"}]'>
+            <div>
+            <h5 data-content="fsTitle"></h5>
+            </div>
+            <div name="fieldsContainer"></div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_image">
+            <div class="form-group">
+            <img class="pull-left" data-src="imageUrl">
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_label_text">
+            <div class="form-group">
+            <label class="col-xs-3 control-label no-padding-right" data-content="label"></label>
+            <div class="col-xs-9">
+            <span data-content="value"></span>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_AceFileTemplate">
+            <div class="form-group">
+            <label class="col-xs-2 control-label no-padding-right" data-content="label"></label>
+            <div class="col-xs-9">
+            <input type="file" data-template-bind='[{"attribute":"name", "value":"name"},{"attribute":"urlHolderSelector", "value":"urlHolderSelector"}]' />
+            <div class="help-inline"></div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_textInput">
+            <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right" data-content="label"></label>
+            <div class="col-sm-9">
+            <input type="text" class="form-control" data-value="value" data-template-bind='[{"attribute":"name", "value":"name"},{"attribute":"placeholder", "value":"placeholder"}]'>
+            <div class="help-inline"></div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_textInput_button_dialog">
+            <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right" data-content="label"></label>
+            <div class="col-sm-9">
+            <div class="input-group">
+            <input type="text" class="form-control"  data-value="value" data-template-bind='[{"attribute":"name", "value":"name"},{"attribute":"placeholder", "value":"placeholder"},{"attribute":"disabled", "value":"disabled"}]'>
+            <span class="input-group-btn">
+            <button class="btn btn-sm btn-primary" type="button" data-template-bind='[{"attribute":"data-action", "value":"actionValue"}]'>
+            <i class="icon-picture bigger-110"></i><span data-content="actionTitle"></span>
+            </button> </span>
+            </div>
+            <div class="help-inline"></div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_textInput_fileUploadButton">
+            <div class="form-group">
+                <label class="col-sm-2 control-label no-padding-right" data-content="label"></label>
+
+                <div class="col-sm-9">
+                    <input type="hidden" id="uploadedUrlHolder" data-template-bind='[{"attribute":"name", "value":"name"}]'>
+                    <input type="file" name="fileUploader" urlHolderSelector="#uploadedUrlHolder"/>
+
+                    <div class="help-inline"></div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_textInput_button_colorpicker">
+            <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right" data-content="label"></label>
+            <div class="col-sm-9">
+            <div class="input-group">
+            <input type="text" class="form-control" disabled="disabled" data-value="value" data-template-bind='[{"attribute":"name", "value":"name"},{"attribute":"placeholder", "value":"placeholder"}]'>
+            <span class="input-group-btn">
+            <div class="dropdown dropdown-colorpicker">
+            <button data-toggle="dropdown" class="btn btn-sm btn-primary dropdown-toggle" type="button" data-template-bind='[{"attribute":"data-action", "value":"actionValue"}]'>
+            <i class="icon-magic bigger-110"></i><span data-content="actionTitle"></span>
+            </button>
+            <ul class="dropdown-menu"></ul>
+            </div> </span>
+            </div>
+            <div class="help-inline"></div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formGroup_textInput_button_material">
+            <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right" data-content="label"></label>
+            <div class="col-sm-9">
+            <div class="input-group">
+            <input type="text" class="form-control" data-value="value" data-template-bind='[{"attribute":"name", "value":"name"},{"attribute":"placeholder", "value":"placeholder"}]'>
+            <span class="input-group-btn">
+            <button class="btn btn-sm btn-primary" type="button" data-template-bind='[{"attribute":"data-action", "value":"actionValue"}]'>
+            <i class="icon-picture bigger-110"></i><span data-content="actionTitle"></span>
+            </button> </span>
+            </div>
+            <div class="help-inline"></div>
+            </div>
+            </div>
+        </script>
+
+        <script type="text/html" id="formElement_line">
+            <hr>
+        </script>
+    </body>
+</html>

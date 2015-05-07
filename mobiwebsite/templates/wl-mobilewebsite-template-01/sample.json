@@ -1,0 +1,54 @@
+{
+	"header": {
+		"title": "嘉禾影城",
+		"desc": "JiaHe Cinema"
+	},
+	"slide": [
+		{
+			"title": "加勒比海盗II",
+			"imageUrl": "images/slide-1.png",
+			"targetUrl": "#"
+		}, {
+			"title": "",
+			"imageUrl": "images/slide-2.png",
+			"targetUrl": "#"
+		}
+	],
+	"category": [
+		{
+			"title": "正在上映",
+			"desc": "Showing",
+			"iconClass": "icon-facetime-video",
+			"targetUrl": "http://www.baidu.com"
+		}, {
+			"title": "即将上映",
+			"desc": "Coming Soon",
+			"iconClass": "icon-time",
+			"targetUrl": "#"
+		}, {
+			"title": "优惠活动",
+			"desc": "Special Offer",
+			"iconClass": "icon-thumbs-up",
+			"targetUrl": "#"
+		}, {
+			"title": "快速购票",
+			"desc": "Fast Booking",
+			"iconClass": "icon-ticket",
+			"targetUrl": "#"
+		}, {
+			"title": "影院咨询",
+			"desc": "Consulting",
+			"iconClass": "icon-info-sign",
+			"targetUrl": "#"
+		}, {
+			"title": "会员特权",
+			"desc": "VIP",
+			"iconClass": "icon-user",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "嘉禾影城@2014",
+		"wlSupportInfo": "demo提供技术支持"
+	}
+}

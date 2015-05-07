@@ -1,0 +1,30 @@
+{
+	"category": [
+		{
+			"title": "公司简介",
+			"iconClass": "icon-home",
+			"targetUrl": "#"
+		}, {
+			"title": "新品推荐",
+			"iconClass": "icon-thumbs-up",
+			"targetUrl": "#"
+		}, {
+			"title": "爆款展示",
+			"iconClass": "icon-bookmark",
+			"targetUrl": "#"
+		}, {
+			"title": "联系我们",
+			"iconClass": "icon-phone",
+			"targetUrl": "#"
+		}, {
+			"title": "精品汇总",
+			"iconClass": "icon-tag",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "家居@2014",
+		"wlSupportInfo": "demo提供技术支持",
+		"pageBgImageUrl": "images/homebgimage.jpg"
+	}
+}

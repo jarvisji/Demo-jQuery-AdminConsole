@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo(freecoder) - 自动回复</title>
+        <meta name="description" content="demo(freecoder),微信公众号服务平台，最优化的用户体验和服务。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>自动回复</h1>
+                            <div class="wl-header-search">
+                                <p class="pull-right">
+                                    <button id="btnSelectMaterial" type="button" class="btn btn-sm btn-primary" data-toggle="button">
+                                        <span>编辑回复</span>
+                                    </button>
+                                    <button id="btnDeleteAutoReply"  type="button" class="btn btn-sm btn-warning" data-toggle="button">
+                                        <span>删除回复</span>
+                                    </button>
+                                </p>
+                            </div>
+                        </div><!-- /.page-header -->
+
+                        <div class="alert alert-block alert-info">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <i class="icon-remove"></i>
+                            </button>
+                            <span>粉丝在回复您微信消息时或者输入无效指令时，系统自动回复您设置的内容给粉丝。回复消息具有唯一性，新增回复消息即默认为替换原有回复消息。</span>
+                        </div>
+                        <div id="alertPlaceHolder"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="replyContainer"></div>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+    </body>
+</html>
+

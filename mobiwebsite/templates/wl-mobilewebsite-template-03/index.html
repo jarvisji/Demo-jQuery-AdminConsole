@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title> demo（freecoder）- 面包模板</title>
+        <link rel="stylesheet" href="../../css/lib/bootstrap.css" />
+        <link rel="stylesheet" href="../../css/wlMwsTemplate.css" />
+        <link rel="stylesheet" href="index.css" />
+        <script data-main="../../scripts/tplmain" src="../../scripts/require.js"></script>
+    </head>
+    <body>
+        <div id="wltplContainer">
+            <div class="wltpl_container" data-template-bind='[{"attribute":"style", "value":"pageBgColor", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"background-color"}}]'>
+                <div name="slide" class="clearfix">
+                    <script type="text/html" id="carouselTemplate">
+                        <div class="wltpl_item wltpl_item_col_1">
+                        <div id="wltpl_carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators cover_dot">
+                        </ol>
+                        <!-- Wrapper for slides -->
+                  
+                        <div class="carousel-inner" style="overflow-y: hidden;" wltpl_data='{"ratio":1.7}'>
+                        </div>
+                        
+                        
+                        </div>
+                        </div>
+                    </script>
+
+                    <script type="text/html" id="carouselIndicatorTemplate">
+                        <li data-target="#wltpl_carousel"></li>
+                    </script>
+
+                    <script type="text/html" id="carouselItemTemplate">
+                        <div class="item">
+                        	<a href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+                        <img data-src="imageUrl">
+                        <div class="carousel-caption" style="bottom:0px;">
+                        	<div class="cover_text" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></div>
+                        	<div style="width:35%;"></div>
+                        </div>
+                        </a>
+                        </div>
+                    </script>
+                </div>
+
+                <div name="category" class="wltpl_font_30 clearfix" style="margin-left:3%;">
+
+                    <script type="text/html" id="categoryTemplate">
+                        <a href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+                        <div class="wltpl_item wltpl_category"  wltpl_data='{"ratio":1}'data-template-bind='[{"attribute":"class", "value":"layoutClass", "formatter": "appendClassFormatter"}]'>
+                        <div class="wltpl_categoryitembgcolor_cat wltpl_font_ratio" data-template-bind='[{"attribute":"style", "value":"bgColor", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"background-color"}}]'>
+                        <img data-src="imageUrl" src="images/category01.jpg"/>
+                        <div class="wltpl_alignment_item text_overflow">
+                        <span data-content="title" data-template-bind='[{"attribute": "style", "value": "color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></span>
+                        </div>
+                        </div>
+                        </div>
+                        </a>
+                    </script>
+
+                </div>
+                <div name="footer" class="wltpl_footer wltpl_font_24">
+                    <script type="text/html" id="footerTemplate">
+                        <div class="text-center wltpl_font_ratio" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+                        <span data-content="siteDesc"></span><br/>
+                        <span data-content="wlSupportInfo"></span>
+                        </div>
+                    </script>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

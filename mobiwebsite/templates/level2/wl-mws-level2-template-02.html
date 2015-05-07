@@ -1,0 +1,31 @@
+<body>
+    {{#each articles}}
+    {{#if @first}}
+    <div class="cover" wltpl_data='{"ratio":2.0}'>
+        <a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+        	<img src="{{coverUrl}}">
+         <div class="text text_overflow">
+            {{title}}
+        </div> 
+        </a>
+    </div>
+    {{else}}
+ <a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+    <div class="row category_row category_border_bottom wltpl_font_32">
+        <div class="cover cover-small pull-left">
+        	<div class="Picimg_material_preview" wltpl_data='{"ratio":1.6}'><img src="{{coverUrl}}"><span></span></div>
+        	
+        </div>
+        <div class="content pull-right wltpl_font_ratio" >
+            <div class="text_overflow">
+                {{title}}
+            </div><br/>
+            <div class="small text_overflow text_color_gray">
+                {{summary}}
+            </div>
+        </div>
+    </div>
+   </a>
+    {{/if}}
+    {{/each}}
+</body>

@@ -1,0 +1,82 @@
+<!-- should define tplPath in app configuration file -->
+<!--便利店模板-->
+<template name="wl_mobilewebsite_template06">
+	<description>
+		<![CDATA[此模板适用于便利店及小商户，可设置项比较丰富，用户可通过DIY分类项图标图片等，使官网彰显个性。图标分类项可设置6项，图片分类项可设置2项]]>
+	</description>
+	<configuration>
+		<!--
+		说明在后台管理中，当前模板的可配置项：
+		设置步骤和配置向导的步骤对应；
+		-->
+		<steps>
+			<step name="slide" title="幻灯片">
+				<description>
+					<![CDATA[1.设置幻灯片，最多可上传5张。建议尺寸（640x380像素）。<br/>2.链接地址以http://开头。 ]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="幻灯片列表" maxRepeats="5" sortable="true" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_image" name="imageUrl"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑幻灯片" sortable="false" templateId="fieldSet_fieldsContainer">
+						<!--validation="fileUploadCompleteValidator" validationMsg="请上传文件"-->
+						 <field templateId="formGroup_textInput_fileUploadButton" name="imageUrl" label="幻灯片图片"/>
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="可选，不超过20个字" validation='{"maxlength":"20"}' validationMsg='{"maxlength":"不能超过20个字"}' />
+						<field templateId="formGroup_textInput_button_colorpicker" name="color" label="前景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+						<field templateId="formGroup_textInput" name="targetUrl" label="链接" placeholder="可选" validation='{"url":true}' validationMsg='{"url":"请输入正确的链接"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			<step name="category" title="分类">
+				<description>
+					<![CDATA[分类栏目管理<br/>1.封面图片建议尺寸（220 x 150像素)。<br/>2.链接地址以http://开头。]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="首页分类设置" maxRepeats="0" sortable="true" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="标题：" name="title"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑分类" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="必填，不超过20个字" validation='{"required":true,"maxlength":"20"}' validationMsg='{"required":"请输入标题","maxlength":"不能超过20个字"}' />
+						<field templateId="formGroup_textInput_button_dialog" name="iconClass" disabled="disabled" label="图标" placeholder="请选择图标 " actionTitle="浏览图标" actionValue="browseIcon" />
+						<field templateId="formGroup_textInput_button_colorpicker" name="iconColor" label="图标颜色" placeholder="请选择图标颜色" actionTitle="选择颜色" actionValue="browseColor" />
+						 <field templateId="formGroup_textInput_fileUploadButton" name="imageUrl" label="封面图片"/>
+						<field templateId="formGroup_textInput_button_colorpicker" name="bgColor" label="背景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+						<field templateId="formGroup_textInput_button_colorpicker" name="color" label="文字颜色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+												<field templateId="formGroup_textInput_button_material" name="targetUrl" label="链接" placeholder="必填" actionTitle="选择链接目标" actionValue="sit" validation='{"required":true, "url":true}' validationMsg='{"required":"请输入链接或选择目标", "url":"链接地址以http://开头"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			<step name="footer" title="其它">
+				<description>
+					<![CDATA[设置页脚版权信息、全局背景色。]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="页脚设置" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="版权信息：" name="siteDesc"/>
+						<field templateId="formGroup_label_text" label="前景色：" name="color"/>
+						<field templateId="formElement_line" />
+						<field templateId="formGroup_label_text" label="页面背景色：" name="pageBgColor"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑页脚" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="siteDesc" label="版权信息" placeholder="可选，不超过20个字" validation='{"maxlength":"20"}' validationMsg='{"maxlength":"不能超过20个字"}'/>
+						<field templateId="formGroup_textInput_button_colorpicker" name="color" label="前景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor"/>
+						<field templateId="formElement_line" />
+						<field templateId="formGroup_textInput_button_colorpicker" name="pageBgColor" label="页面背景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor"/>
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+		</steps>
+	</configuration>
+</template>

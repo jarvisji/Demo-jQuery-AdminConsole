@@ -1,0 +1,30 @@
+{
+	"header": {
+		"title": "旅游攻略",
+		"targetUrl": "#"
+	},
+	"category": [
+		{
+			"title": "地理交通",
+			"iconClass": "icon-truck",
+			"targetUrl": "#"
+		}, {
+			"title": "自然气候",
+			"iconClass": "icon-cloud",
+			"targetUrl": "#"
+		}, {
+			"title": "历史人文",
+			"iconClass": "icon-home",
+			"targetUrl": "#"
+		}, {
+			"title": "景区信息",
+			"iconClass": "icon-location-arrow",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "",
+		"wlSupportInfo": "",
+		"pageBgImageUrl": "images/homebgimage.png"
+	}
+}

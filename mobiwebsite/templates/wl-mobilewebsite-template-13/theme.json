@@ -1,0 +1,50 @@
+{
+	"slide": [],
+	"category": {
+		"template": [
+
+			{
+				"id": "smallSquareCategoryTemplate",
+				"applyTo": "0,5,10,15"
+			}, {
+				"id": "bigimgCategoryTemplate",
+				"applyTo": "1,6,11,16"
+			}, {
+				"id": "smallimgCategoryTemplate",
+				"applyTo": "2,7,12,17"
+			}, {
+				"id": "imgCategoryTemplate",
+				"applyTo": "3,8,13,18"
+			}
+			, {
+				"id": "textCategoryTemplate",
+				"applyTo": "4,9,14,19"
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#d87570",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#b2cebf",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#73a09d",
+				"color": "#ffffff"
+			}, {
+			    "bgColor": "#73a09d",
+				"color": "#ffffff",
+				"layoutClass": "wltpl_item_col_3"
+			}, {
+				"bgColor": "#d87570",
+				"color": "#ffffff"
+			}
+		]
+	},
+	"footer": {
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e4e4e4"
+		}
+	}
+}

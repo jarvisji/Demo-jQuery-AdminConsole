@@ -1,0 +1,40 @@
+{
+	"slide": [
+		{
+			"title": "外贸模板",
+			"imageUrl": "images/slide-1.png",
+			"targetUrl": "#"
+		}
+	],
+	"category": [
+		{
+			"title": "集团概况",
+			"iconClass": "icon-home",
+			"targetUrl": "#"
+		}, {
+			"title": "新闻中心",
+			"iconClass": "icon-list-alt",
+			"targetUrl": "#"
+		}, {
+			"title": "业务介绍",
+			"iconClass": "icon-bullhorn",
+			"targetUrl": "#"
+		}, {
+			"title": "产品中心",
+			"iconClass": "icon-archive",
+			"targetUrl": "#"
+		}, {
+			"title": "海外机构",
+			"iconClass": "icon-plane",
+			"targetUrl": "#"
+		}, {
+			"title": "联系我们",
+			"iconClass": "icon-phone",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "外贸模板@2014",
+		"wlSupportInfo": "demo提供技术支持"
+	}
+}

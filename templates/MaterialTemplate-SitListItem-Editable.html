@@ -1,0 +1,22 @@
+<li class="thumbnail_GM" data-template-bind='[{"attribute":"id", "value":"id"}]'>
+    <div class="single_material_preview">
+        <div>
+            <h3 data-content="title" data-format="htmlEncodeFormatter"></h3>
+            <h5 data-content="appLastModifyTime" data-format="dateTimeFormatter"></h5>
+            <div class="img_material_preview">
+                <img data-template-bind='[{"attribute": "src", "value": "coverUrl"}]' />
+            </div>
+            <h5 data-content="summary" data-format="htmlEncodeFormatter"></h5>
+        </div>
+        <div class="text">
+            <div class="inner">
+                <a href="#" data-operation="edit" name="aEditSingle"> <i class="icon-pencil icon-2x"></i> </a>
+                &nbsp;
+                <a href="#" data-operation="delete" name="aDeleteSingle"> <i class="icon-trash icon-2x"></i> </a>
+                &nbsp;
+                <a href="#" data-operation="view" name="aViewSingle"> <i class="icon-zoom-in icon-2x"></i> </a>
+            </div>
+            <div data-type='wl-tags-input' placeholder="输入标签"></div>
+        </div>
+    </div>
+</li>

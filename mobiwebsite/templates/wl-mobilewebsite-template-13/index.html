@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title> demo（freecoder）- 酒店模板</title>
+		<link rel="stylesheet" href="../../css/lib/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/lib/jquery-ui-1.10.4.css" />
+		<link rel="stylesheet" href="../../css/lib/font-awesome.min.css" />
+		<link rel="stylesheet" href="../../css/wlMwsTemplate.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script data-main="../../scripts/tplmain" src="../../scripts/require.js"></script>
+
+	</head>
+	<body>
+
+		<div id="wltplContainer">
+			<div class="wltpl_container">
+
+				<div name="slide" class="wltpl_item_top">
+
+					<script type="text/html" id="carouselTemplate">
+						<div id="wltpl_carousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators cover_dot">
+						</ol>
+						<!-- Wrapper for slides -->
+
+						<div class="carousel-inner " style="overflow-y: hidden;" wltpl_data='{"ratio":1.7}'>
+						</div>
+
+						</div>
+					</script>
+
+					<script type="text/html" id="carouselIndicatorTemplate">
+						<li data-target="#wltpl_carousel"></li>
+					</script>
+
+					<script type="text/html" id="carouselItemTemplate">
+						<div class="item">
+						<a href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<img data-src="imageUrl">
+						<div class="carousel-caption" style="bottom:0px;">
+						<div class="cover_text" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></div>
+						<div style="width:35%;"></div>
+						</div>
+						</a>
+						</div>
+					</script>
+				</div>
+
+				<div name="category">
+
+					<script type="text/html" id="smallSquareCategoryTemplate">
+						<a class="wltpl_font_30" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<div wltpl_data='{"ratio":2}'
+						class="smallSquareCategory wltpl_font_ratio" data-template-bind='[{"attribute": "style", "value": "bgColor", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"background-color"}},{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+						<div style="margin-top:12%;">
+						<i class="icon-2x" style="margin-left:45%;" data-template-bind='[{"attribute": "class", "value": "iconClass", "formatter": "appendClassFormatter"}]'></i><br/>
+						<span style="margin-left:32%;" class="text_overflow" data-content="title"></span>
+						</div>
+						</div>
+						</a>
+					</script>
+					<script type="text/html" id="bigimgCategoryTemplate">
+						<a class="wltpl_font_30" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<div wltpl_data='{"ratio":1, "autoHeight":"false"}'
+						class="bigimgSquareCategory wltpl_font_ratio"  data-template-bind='[{"attribute": "style", "value": "imageUrl", "formatter":"backgroundUrlFormatter", "formatOptions":{"cssProp":"background-image"}},{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+						<div class="smallimgSquareCategory_title" style="margin-top:79%;">
+						<span style="margin-left:11%;" class="text_overflow" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></span>
+						</div>
+						</div>
+						</a>
+					</script>
+					<script type="text/html" id="smallimgCategoryTemplate">
+						<a class="wltpl_font_30" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<div wltpl_data='{"ratio":2}'
+						class="smallimgSquareCategory wltpl_font_ratio" data-template-bind='[{"attribute": "style", "value": "imageUrl", "formatter":"backgroundUrlFormatter", "formatOptions":{"cssProp":"background-image"}},{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+						<div class="smallimgSquareCategory_title" style="margin-top:29%;">
+						<span style="margin-left:12%;" class="text_overflow" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]' ></span>
+						</div>
+						</div>
+						</a>
+					</script>
+					<script type="text/html" id="imgCategoryTemplate">
+						<a class="wltpl_font_30" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<div wltpl_data='{"ratio":1}'
+						class="smallimgSquareCategory wltpl_font_ratio" data-template-bind='[{"attribute": "style", "value": "imageUrl", "formatter":"backgroundUrlFormatter", "formatOptions":{"cssProp":"background-image"}},{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+						<div class="smallimgSquareCategory_title" style="margin-top:79%;">
+						<span style="margin-left:12%;" class="text_overflow" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]' ></span>
+						</div>
+						</div>
+						</a>
+					</script>
+					<script type="text/html" id="textCategoryTemplate">
+						<div class="wltpl_item textCategoryTemplate_title wltpl_font_40" style="overflow:hidden;" wltpl_data='{"ratio":1}' data-template-bind='[{"attribute": "style", "value": "bgColor", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"background-color"}}]'>
+						<a class="wltpl_font_ratio" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+						<div style="margin-top:25%;">
+						<i class="icon-3x" style="margin-left:42%;" data-template-bind='[{"attribute": "class", "value": "iconClass", "formatter": "appendClassFormatter"},{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></i>
+						<span style="margin-left:28%;" class="text_overflow" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'>
+						</span>
+						</div>
+						</a>
+						</div>
+					</script>
+					
+				</div>
+
+				<div name="footer" class="wltpl_footer wltpl_font_24">
+					<script type="text/html" id="footerTemplate">
+						<div class="text-center wltpl_font_ratio">
+						<span data-content="siteDesc"></span><br/>
+						<span data-content="wlSupportInfo"></span>
+						</div>
+					</script>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>

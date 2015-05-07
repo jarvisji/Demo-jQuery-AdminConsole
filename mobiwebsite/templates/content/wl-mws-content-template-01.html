@@ -1,0 +1,26 @@
+<body>
+	<div class="wltpl_content">
+
+		<div class="contenttemplateheader">
+			<h3><b>{{title}}</b></h3>
+		</div>
+
+		<div class="clearfix small" style="color:#666;">
+			<span class="pull-left">{{appLastModifyTime}}</span>
+             {{#if author}}
+			<span class="pull-left" style="margin-left:5%;">{{author}}</span>
+			{{/if}}
+		</div>
+		
+		<div >
+			<img src="{{coverUrl}}" class="contentcover">
+		</div>
+		
+		<div>
+			{{{content}}}
+		</div>
+		
+
+	</div>
+	
+</body>

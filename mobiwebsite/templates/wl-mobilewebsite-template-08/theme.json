@@ -1,0 +1,18 @@
+{
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate",
+				"applyTo": "*",
+				"styleIndex": 0
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#fff",
+				"color": "#000"
+			}
+		]
+	},
+	"footer": {}
+}

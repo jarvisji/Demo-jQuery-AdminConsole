@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>demo（freecoder）- 基本信息</title>
+    <meta name="description" content="demo（freecoder）- 个人信息"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/lib/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/lib/ace.min.css"/>
+    <link rel="stylesheet" href="css/freecoder.css"/>
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+</head>
+
+<body>
+<div id="headerPlaceHolder"></div>
+<div class="main-container container" id="main-container">
+    <div class="main-container-inner">
+        <div class="page-content">
+
+            <div class="page-header">
+                <h1> 用户基本信息 </h1>
+            </div>
+            <!-- /.page-header -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <div id="alertPlaceHolder"></div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="serviceInfo" class="alert alert-info">您是<span
+                                    id="serviceStatus"></span>用户，服务截止日期为<span
+                                    id="serviceEndDate"></span>，如有疑问请联系客服：400-805-1619。
+                            </div>
+                            <form class="form-horizontal" id="pubAccountForm" role="form" method="post"
+                                  action="./php/fileUpload.php?action=UserAvatarUpload">
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 头像 </label>
+                                    <input type="hidden" id="avatar" name="avatar">
+
+                                    <div id="imgshow" class="col-sm-9" style="width:180px;">
+                                        <input type="file" name="fileUploader" id="fileUploader"/>
+                                    </div>
+                                </div>
+
+                                <div class="space-4" id=""></div>
+                                <input type="hidden" class="col-xs-10 col-sm-5" name="id"/>
+                                <input type="hidden" class="col-xs-10 col-sm-5" name="status"/>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 用户名<span
+                                            class="red">* </span></label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="username" name="username" class="col-xs-10 col-sm-5"/>
+                                        <span class="help-inline col-xs-12 col-sm-7">
+                                            <label for="username" class="help-block"></label> </span>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 电子邮件<span
+                                            class="red">* </span> </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="email" name="email" class="col-xs-10 col-sm-5"/>
+                                        <span class="help-inline col-xs-12 col-sm-7">
+                                            <label for="email" class="help-block"></label> </span>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 密码<span
+                                            class="red">* </span> </label>
+
+                                    <div class="col-sm-9">
+                                        <button class="btn btn-danger btn-sm" id="btnShowChangePasswordForm">修改</button>
+                                        <div id="divChangePassword" class="hide">
+                                            原密码：<input type="password" id="oldPass" placeholder="原密码">
+                                            新密码：<input type="password" id="newPass" placeholder="新密码"><br>
+                                            <button class="btn btn-danger btn-sm" id="btnChangePassword">保存</button>
+                                            <button class="btn btn-default btn-sm" id="btnCancelPassword">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 微信号 </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="weixinNumber" name="weixin" class="col-xs-10 col-sm-5"/>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> QQ号 </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="qqNumber" name="qq" class="col-xs-10 col-sm-5"/>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right"> 手机号<span
+                                            class="red">* </span> </label>
+
+                                    <div class="col-sm-9">
+                                        <input type="text" id="mobilePhone" name="mobilePhone"
+                                               class="col-xs-10 col-sm-5"/>
+                                        <span class="help-inline col-xs-12 col-sm-7">
+                                            <label for="mobilePhone" class="help-block"></label> </span>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="clearfix form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button class="btn btn-info" id="btnSubmit" type="button">
+                                            <i class="icon-ok bigger-110"></i>保存
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- /row -->
+                    <!-- PAGE CONTENT ENDS -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.page-content -->
+    </div>
+    <!-- /.main-container-inner -->
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"> <i
+            class="icon-double-angle-up icon-only bigger-110"></i> </a>
+</div>
+<!-- /.main-container -->
+</body>
+</html>

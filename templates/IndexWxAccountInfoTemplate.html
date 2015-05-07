@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-md-3">
+        <span class="profile-picture"> <img id="avatar" data-src="avatar"></img> </span>
+        <div class="space"></div>
+        <div class="row">
+            <div class="col-md-12 center">
+                <button id="btnEdit" class="btn btn-info" data-template-bind='[{"attribute":"data-id", "value":"id"}]'>
+                    <span>修改信息</span>
+                </button>
+                <button id="btnManage" class="btn btn-success" data-template-bind='[{"attribute":"data-id", "value":"id"}]'>
+                    <span>让公众号炫起来！</span>
+                </button>
+            </div>
+        </div>
+    </div><!-- /.col -->
+    <div class="col-md-9">
+        <h2><span data-content="name"></span></h2>
+        <div class="profile-user-info profile-user-info-striped">
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>联系人</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="contactName" data-format="htmlEncodeFormatter"></span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>联系电话</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="contactPhone" data-format="htmlEncodeFormatter"></span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>联系邮箱</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="email" data-format="htmlEncodeFormatter"></span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>绑定时间</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="appCreateTime" data-format="dateTimeFormatter"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hr dotted"></div>
+        <!--<h4>demo服务信息 <abbr title="向微信公众平台提供以下服务信息，就可以使用demo提供的丰富功能。（点击查看详情）"
+        onclick="alert('hi')"><small>这是什么？</small></abbr></h4>-->
+        <div class="profile-user-info profile-user-info-striped">
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>URL</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="serviceUrl" data-format="htmlEncodeFormatter"></span>
+                </div>
+            </div>
+            <div class="profile-info-row">
+                <div class="profile-info-name">
+                    <span>Token</span>
+                </div>
+                <div class="profile-info-value">
+                    <span data-content="token" data-format="htmlEncodeFormatter"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /.row -->
+<div class="hr dotted"></div>

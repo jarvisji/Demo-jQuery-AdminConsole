@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 视频</title>
+        <meta name="description" content="demo（freecoder）-视频" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>视频 </h1>
+                            <div class="wl-header-search">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-backdrop="static" data-target="#modalAdd">
+                                            <i class="icon-new"></i><span>新增</span>
+                                        </button> &nbsp;</span>
+                                    <input type="text" class="form-control"  id="searchValue" placeholder="搜索" />
+                                     <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" id="search">
+                                            <i class="icon-new"></i><span>搜索</span>
+                                        </button> &nbsp;</span>
+                                </div>
+                            </div>
+                        </div><!-- /.page-header -->
+
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div id="alertPlaceHolder"></div>
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-1" id="listContainerLeft">
+                                <ul class="ace-thumbnails" id="videoList"></ul>
+                            </div>
+                            <div class="col-md-5" id="listContainerRight">
+                                <ul class="ace-thumbnails" id="videoList"></ul>
+                            </div>
+                        </div>
+
+                        <script type="text/html" id="videoListTemplate">
+                            <li class="thumbnail_VL_Video" data-template-bind='[{"attribute":"id", "value":"id"}]'>
+                            <div>
+                            <div class="Video-header">
+                            <h1 data-content="fileName"><small></small></h1>
+                            </div>
+                            <div class="VLimg_material_preview" ><img src="images/Videoimage.jpg" /><span></span></div>
+                            <h5 data-content="description"></h5>
+                            <div class="text">
+                            <div class="inner">
+
+                            <a class="cboxElement" data-link="url" data-rel="colorbox">
+                            <i class="icon-facetime-video bigger-110"></i>
+                            </a>
+
+                            <a name="aEditVideo" href="#">
+                            <i class="icon-pencil bigger-110"></i>
+                            </a>
+
+                            <a href="#" name="aDeleteVideo">
+                            <i class="icon-remove bigger-110"></i>
+                            </a>
+                            </div>
+                            </div>
+                            </div>
+                            </li>
+                        </script>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">编辑视频素材</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form_bg center-block">
+                                    <form class="form-horizontal" id="VideoForm" role="form" method="post" action="./php/fileUpload.php">
+                                        <div class="form-group">
+                                            <label for="fileMultiple" class="help-block">视频上传（格式为mp4,avi,wmv，限制为20M）</label>
+                                            <input type="hidden" id="url"  name="url">
+                                            <input type="file" id="fileMultiple" name="fileUploader" />
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fileName" class="help-block">视频标题</label>
+                                            <input type="text" id="fileName" name="fileName"   placeholder="必填，不超过50个字" class="col-sm-12" />
+                                            <div class="help-inline"></div>
+                                            <hr/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="extenalUrl" class="help-block">视频链接(可选，链接地址以http://开头，设置后点击视频直接进入外链所设地址)</label>
+                                            <input type="text" id="extenalUrl" name="extenalUrl"  class="col-sm-12" />
+                                            <div class="help-inline"></div>
+                                            <hr/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">视频简介</label>
+                                            <textarea id="description" name="description" placeholder="可选，不超过120个字"  class="autosize-transition form-control"></textarea>
+                                            <div class="help-inline"></div>
+                                            <hr/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <span>关闭</span>
+                        </button>
+                        <button id="btnSubmit" type="button" class="btn btn-primary">
+                            <span>保存</span>
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </body>
+</html>

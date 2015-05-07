@@ -1,0 +1,24 @@
+{
+	"slide": [],
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate",
+				"applyTo": "*",
+				"styleIndex": 0
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#ffffff",
+				"color": "#000000"
+			}
+		]
+	},
+	"footer": {
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e4e4e4"
+		}
+	}
+}

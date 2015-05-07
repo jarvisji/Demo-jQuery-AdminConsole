@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>demo（freecoder）- 官网入口消息设置</title>
+		<meta name="description" content="demo（freecoder）" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css"  />
+		<link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+		<link rel="stylesheet" href="css/lib/ace.min.css" />
+		<link rel="stylesheet" href="css/freecoder.css" />
+		<script data-main="scripts/main" src="scripts/require.js"></script>
+	</head>
+
+	<body>
+
+		<div id="headerPlaceHolder"></div>
+
+		<div class="main-container container" id="main-container">
+			<div class="main-container-inner">
+				<!-- menu -->
+				<div id="menuPlaceHolder"></div>
+				<div class="main-content">
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1> 官网入口消息设置 </h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<div class="alert alert-block alert-danger hidden">
+									<button type="button" class="close" data-dismiss="alert">
+										<i class="icon-remove"></i>
+									</button>
+								</div>
+
+								<div class="row">
+									<div class="col-xs-12">
+										<form class="form-horizontal" id="MwxEntryForm" role="form"
+                                              method="post" action="./php/fileUpload.php" >
+											<div class="space-4"></div>
+                                            <input type="hidden" name="targetFileName" value="wxmsg-home">
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right">启用 </label>
+												<div class="col-sm-9">
+													<label>
+														<input id="entry_enabled" name="entry_enabled"  class="ace ace-switch ace-switch-4" type="checkbox" />
+														<span class="lbl"></span> </label>
+												</div>
+											</div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label no-padding-right help-block"> 官网地址
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <span class="col-sm-8" id="mwsSiteUrl"></span>
+                                                </div>
+                                            </div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right help-block"> 关键字 </label>
+												<div class="col-sm-9">
+													<input type="text" id="keyword" name="keyword" placeholder="必填不少于6个字符" value="home" class="col-xs-10 col-sm-5" />
+													<div class="help-inline"></div>
+												</div>
+											</div>
+
+											<div class="space-4"></div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right help-block">标题 </label>
+												<div class="col-sm-9">
+													<input type="text" id="entry_title" name="entry_title" placeholder="必填不少于6个字符" class="col-xs-10 col-sm-5" />
+													<div class="help-inline"></div>
+												</div>
+											</div>
+
+											<div class="space-4"></div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right help-block">图片（建议250像素X140像素）</label>
+												<input type="hidden" id="entry_imageUrl" name="entry_imageUrl">
+												<div id="imgshow" class="col-sm-4">
+													<input type="file"   name="fileUploader" id="fileUploader"/>
+												</div>
+												<div class="help-inline"></div>
+											</div>
+											<div class="space-4"></div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-right help-block">摘要<small class="red">*</small></label>
+												<div class="col-sm-9">
+													<textarea style="padding-left:4px;" id="entry_desc" name="entry_desc" placeholder="必填,不超过64个字" class="col-xs-10 col-sm-5"></textarea>
+													<div class="help-inline"></div>
+												</div>
+												
+											</div>
+											<div class="space-4"></div>
+
+											<div class="clearfix form-actions">
+												<div class="col-md-offset-3 col-md-9">
+													<button class="btn btn-info"   id="btnSubmit" type="button">
+														<i class="icon-ok bigger-110"></i>保存
+													</button>
+												</div>
+											</div>
+
+										</form>
+									</div>
+
+								</div><!-- /row -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-container-inner -->
+
+			</div><!-- /.main-container -->
+		</div>
+	</body>
+</html>

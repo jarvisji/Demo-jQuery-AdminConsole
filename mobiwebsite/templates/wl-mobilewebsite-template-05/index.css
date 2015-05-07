@@ -1,0 +1,90 @@
+.wltpl_font_30 {
+	font-size: 30px;
+}
+a, a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.wltpl_container {
+	width: 100%;
+	background-color: #fbf7de;
+}
+
+.wltpl_phonebackground {
+	width: 100%;
+	height: 100%;
+	background: url(images/phonebackgroundimage.png) no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+.wltpl_iconphone {
+	float: left;
+	margin-left: 10%;
+	width: 9.322%;
+	height: 45%;
+	margin-top: 3%;
+}
+.wltpl_phonenum {
+	float: left;
+	margin-top: 4%;
+	margin-left: 5%;
+	letter-spacing: 0.6em;
+	width: 70%;
+}
+
+.wltpl_item {
+	margin-top: 10px;
+}
+
+.wltpl_item.wltpl_item_top {
+	margin-top: 0px;
+}
+
+.wltpl_item.wltpl_item_col_1 {
+	border-width: 0px 10px 0px 10px;
+	border-style: solid;
+	border-color: rgba(125, 0, 0, 0);
+	width: 100%;
+}
+
+.wltpl_item.wltpl_item_col_3 {
+	width: 33.3333%;
+	display: inline-block;
+}
+
+.wltpl_categoryborder {
+	width: 80%;
+	height: 80%;
+	margin-left: 10%;
+	border: #fff solid 5px;
+	border-radius: 50%;
+}
+.wltpl_categoryborder_img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.wltpl_category_title {
+	margin-left: 10%;
+	text-align: center;
+	margin-top: 2px;
+	width: 80%;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.footer {
+	width: 100%;
+	background: #fefde1;
+}
+.wltpl_footer {
+	width: 100%;
+	color: #000;
+}
+.carousel img {
+	width: 100%;
+}
+

@@ -1,0 +1,312 @@
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+img {
+	border: none;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: " "
+}
+.clearfix:after {
+	clear: both
+}
+.pull-right {
+	float: right !important
+}
+.pull-left {
+	float: left !important
+}
+
+.wltpl_font_16 {
+	font-size: 16px;
+}
+.wltpl_font_24 {
+	font-size: 24px;
+}
+.wltpl_font_28 {
+	font-size: 24px;
+}
+.wltpl_font_30 {
+	font-size: 30px;
+}
+.wltpl_font_32 {
+	font-size: 32px;
+}
+.space_padding {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.wltpl_footer {
+	margin-top: 20px;
+}
+
+/**
+ * 	二级模板css star
+ */
+
+body {
+	background-color: #f6f6f6;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+}
+.cover {
+	width: 100%;
+	position: relative;
+	overflow-y: hidden;
+}
+.cover img {
+	width: 100%;
+}
+ol {
+	margin-bottom: 0px;
+}
+
+/**
+ * 	img 垂直居中代码
+ */
+.Picimg_material_preview {
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	background-color: #fff;
+}
+.Picimg_material_preview img, .Picimg_material_preview span {
+
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.Picimg_material_preview img {
+
+	width: 100%;
+	overflow: hidden;
+	margin: 0px auto;
+}
+.Picimg_material_preview span {
+	width: 0;
+	height: 100%;
+}
+
+.cover-small {
+	width: 32%;
+	overflow-y: hidden;
+}
+.content {
+	width: 65%;
+}
+.content_title {
+	width: 80%;
+}
+.text {
+	width: 100%;
+	padding: 5px 0;
+	text-align: right;
+	background-color: #000;
+	color: #fff;
+	position: absolute;
+	z-index: 2;
+	left: 0px;
+	bottom: 0px;
+	opacity: 0.6;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";
+}
+.row {
+	width: 100%;
+}
+.row:before, .row:after {
+	display: table;
+	content: " ";
+}
+.row:after {
+	clear: both;
+}
+.small {
+	font-size: 85%;
+}
+
+.hidden {
+	display: none;
+}
+
+.category_item_col_1 {
+	width: 97%;
+	margin-right: 3%;
+}
+.category_item_col_2 {
+	border-bottom: none;
+	width: 47%;
+	margin-left: 3%;
+	margin-top: 3%;
+}
+.category_row {
+	margin-top: 3%;
+	padding-bottom: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
+	width: 94%;
+}
+.category_padding {
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 3%;
+}
+.category_padding_bottom {
+	padding-bottom: 3%;
+}
+.category_border_bottom {
+	border-bottom: #ccc solid 1px;
+}
+
+.text_overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.text_color_gray {
+	color: #666;
+}
+
+.categroy_shadow {
+	box-shadow: 1px 1px 2px #000;
+	background-color: #fff;
+}
+.categroy_radius {
+	border-radius: 5px;
+	background-color: #fff;
+}
+.no_border_bottom {
+	border-bottom: none;
+}
+.no_margin_left {
+	margin-left: 0px;
+}
+
+/**
+ * 	Override bootstrap carousel styles, the original style doesn't work well if user upload image higher than carousel contianer.
+ */
+.carousel-inner > .item {
+	height: 100%;
+}
+.carousel-caption {
+	/* make caption 100% width to parent */
+	right: 0px;
+	left: 0px;
+	bottom: 10px; /* same to indicators. */
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 100%;
+	/*background-color: blue;*/
+}
+.carousel-indicators {
+	/* Make indicators position at right-bottom corner */
+	width: 35%;
+	right: 0px;
+	left: auto;
+	margin-left: 0;
+	bottom: 0px; /* bootstyle style has another margin-bottom: 10px; So indicators have same bottom size to caption, 10px. */
+}
+.carousel-indicators .active {
+	display: inline-block;
+	margin: 1px;
+}
+.carousel-indicators li {
+	margin: 2px;
+}
+/**
+ * 	文章页模板css star
+ */
+.wltpl_content {
+	width: 92%;
+	margin-right: 4%;
+	margin-left: 4%;
+}
+.wltpl_content img{width:100%;}
+.contenttemplateheader {
+
+	width: 100%;
+	text-align: center
+}
+.contentcover {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+}
+
+/***********************************************
+ * The following are not in use.
+ */
+.wlicon {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	margin: 10px;
+	background-color: transparent;
+	border: 0;
+	vertical-align: top;
+	text-align: center;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.icon_account_new {
+	background-image: url("../images/icon/icon-account-new.png");
+}
+
+.icon_loudspeaker {
+	background-image: url("../images/icon/icon-loudspeaker.png");
+}
+
+.icon_mixer {
+	background-image: url("../images/icon/icon-mixer.png");
+}
+
+.icon_movie_play {
+	background-image: url("../images/icon/icon-movie-play.png");
+}
+
+.icon_pad_demo {
+	background-image: url("../images/icon/icon-pad-demo.png");
+}
+
+.icon_slide {
+	background-image: url("../images/icon/icon-slide.png");
+}
+
+/* -- arrows -- */
+.icon_right_arrow_incircle {
+	background-image: url("../images/icon/icon-right-arrow-incircle.png");
+}
+
+.cover_text {
+	width: 68%;
+	bottom: 0px;
+	padding-left: 2%;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.cover_dot {
+	float: right;
+	text-align: right;
+	padding-right: 2%;
+}
+

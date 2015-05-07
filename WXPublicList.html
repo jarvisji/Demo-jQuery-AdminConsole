@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 公众号管理</title>
+        <meta name="description" content="demo（freecoder）- 公众号管理" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <!--header公共部分代码 star-->
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+
+                <!--content部分内容-->
+                <div class="page-content">
+                    <div class="page-header hidden">
+                        <h1> 微信公众号管理平台 </h1>
+                    </div><!-- /.page-header -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="WXPublic.html" >
+                                    <button class="btn btn-warning btn-lg" style="margin:10px 0px;">
+                                        添加微信公众号
+                                    </button> </a>
+
+                                    <table id="wxAccountList" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>公众号名称</th>
+                                                <th>url</th>
+                                                <th>token</th>
+                                                <th>联系邮箱</th>
+                                                <th>联系人</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- jquery template -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- /row -->
+                            <!-- PAGE CONTENT ENDS -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.page-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+    </body>
+</html>

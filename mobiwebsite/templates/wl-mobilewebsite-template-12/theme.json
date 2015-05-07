@@ -1,0 +1,56 @@
+{
+	"slide": [],
+	"category": {
+		"template": [
+
+			{
+				"id": "bigSquareCategoryTemplate",
+				"applyTo": "0"
+			}, {
+				"id": "smallSquareCategoryTemplate",
+				"applyTo": "1-4"
+			},{
+				"id": "imgCategoryTemplate",
+				"applyTo": "5"
+			},{
+				"id": "imgCategoryTemplate02",
+				"applyTo": "6"
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#d87570",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#b2cebf",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#73a09d",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#73a09d",
+				"color": "#ffffff"
+			}, {
+				"bgColor": "#b2cebf",
+				"color": "#ffffff"
+			}, {
+				"layoutClass": "wltpl_item_col_3"
+			}, {
+				"layoutClass": "wltpl_item_col_3"
+			}
+		]
+	},
+	"footer": {
+		"template": [
+			{
+				"name": "dail",
+				"id": "phoneTemplate",
+				"parentContainer": "[name='category']"
+			}
+		],
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e4e4e4"
+		}
+	}
+}

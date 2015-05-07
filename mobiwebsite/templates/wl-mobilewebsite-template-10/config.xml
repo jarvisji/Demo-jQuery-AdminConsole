@@ -1,0 +1,75 @@
+<!-- should define tplPath in app configuration file -->
+<!--旅游模板-->
+<template name="wl_mobilewebsite_template10">
+	<description>
+		<![CDATA[此模板此模板适用于旅游、餐饮、产品型公司等各大行业，建议首页分类项设置为奇数项，5项显示效果较好。]]>
+	</description>
+	<configuration>
+		<!--
+		说明在后台管理中，当前模板的可配置项：
+		设置步骤和配置向导的步骤对应；
+		-->
+		<steps>
+			<step name="header" title="页头设置">
+				<description>
+					<![CDATA[1.特殊分类栏目。<br/>2.除标题支持自定义设置，背景色，前景色和icon图标暂时都不支持。]]>
+				</description>
+				<view>
+					<!-- fsTitle目前没有用处，仅作说明。 -->
+					<fieldSet fsTitle="页头设置" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="标题：" name="title"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<!-- 只有edit节点中的field的validation属性有效 -->
+					<fieldSet fsTitle="编辑页头" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="必填，不超过6个字" validation='{"required":true,"maxlength":"6"}' validationMsg='{"required":"请输入标题","maxlength":"不能超过6个字"}' />
+						<field templateId="formGroup_textInput_button_material" name="targetUrl" label="链接" placeholder="必填" actionTitle="选择链接目标" actionValue="sit" validation='{"required":true, "url":true}' validationMsg='{"required":"请输入链接或选择目标", "url":"链接地址以http://开头"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+		
+			<step name="category" title="分类">
+				<description>
+					<![CDATA[1.	分类栏目管理。<br/>2. 链接地址以http://开头。]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="首页分类设置" maxRepeats="4" sortable="true" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="标题：" name="title"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑分类" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="必填，不超过6个字" validation='{"required":true,"maxlength":"6"}' validationMsg='{"required":"请输入标题","maxlength":"不能超过6个字"}'/>
+						<field templateId="formGroup_textInput_button_dialog" name="iconClass" label="图标" disabled="disabled" placeholder="请选择图标" actionTitle="浏览图标" actionValue="browseIcon" />
+						<field templateId="formGroup_textInput_button_colorpicker" name="bgColor" label="背景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+						<field templateId="formGroup_textInput_button_colorpicker" name="color" label="前景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+						<field templateId="formGroup_textInput_button_material" name="targetUrl" label="链接" placeholder="必填" actionTitle="选择链接目标" actionValue="sit" validation='{"required":true, "url":true}' validationMsg='{"required":"请输入链接或选择目标", "url":"链接地址以http://开头"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			<step name="footer" title="其它">
+				<description>
+					<![CDATA[1.设置全局背景图。<br/>2.请上传清晰度高且尺寸较长的图片作为背景以适应不同屏幕尺寸的手机，建议尺寸640x1136像素。]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="页脚设置" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="页面背景图：" name="pageBgImageUrl"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑页脚" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						    <field templateId="formGroup_textInput_fileUploadButton" name="pageBgImageUrl" label="背景图片"/>
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			
+		</steps>
+	</configuration>
+</template>

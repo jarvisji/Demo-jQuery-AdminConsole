@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>demo(freecoder) - 官网首页预览</title>
+    <meta name="description" content="demo(freecoder),微信公众号服务平台，最优化的用户体验和服务。"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/lib/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/lib/jquery.gritter.css"/>
+    <link rel="stylesheet" href="css/lib/ace.min.css"/>
+
+    <link rel="stylesheet" href="css/freecoder.css"/>
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+    <style>
+        iframe {
+            width: 254px;
+            height: 394px;
+            position: absolute;
+            top: 144px;
+            left: 28px;
+            overflow-y: scroll;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="headerPlaceHolder"></div>
+<div class="main-container container" id="main-container">
+    <div class="main-container-inner">
+        <div id="menuPlaceHolder"></div>
+        <div class="main-content">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>官网首页设置</h1>
+
+                </div>
+                <!-- /.page-header -->
+                <div id="alertPlaceHolder"></div>
+                <div id="divTemplateWasSet" class="row">
+                    <div class="col-md-4 col-md-offset-2">
+                        <div id="divIphonePreview" style="position:relative;width:310px">
+                            <img src="images/iphone5s_gold.jpg" usemap="wxuiMap" style="width:100%">
+                            <map name="wxuiMap" id="wxuiMap" border="1">
+                                <area shape="rect" href="#" coords="45,115,95,135" style="cursor: pointer"/>
+                            </map>
+                            <iframe id="divIphonePreviewContent"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="space-8"></div>
+                        <div class="alert alert-info">
+                            <span>模板设置说明：</span>
+                            <ul>
+                                <li>设置首页内容或更换模板时，须逐步保存，并到最后一步“Finish”才会生效。</li>
+                                <li>不同模板支持的可定制内容不同，更换模板后可能发生内容变化，请参照各模板说明相应调整。</li>
+                                <li>在预览页面操作，如遇到跳转至外部网页后，返回按钮无效的情况，勿担心，在手机上可正常工作。</li>
+                            </ul>
+                        </div>
+                        <div class="space-12"></div>
+                        <button id="btnChangeSettings" class="btn btn-block btn-info">
+                            <span>修改首页内容</span>
+                        </button>
+                        <button id="btnChangeTemplate" class="btn btn-block btn-warning">
+                            <span>选择其它模板</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div id="divTemplateWasntSet" class="row hidden">
+                    <h3>你还没有选择模板并设置首页内容：</h3>
+                    <button id="btnSelectTemplate" class="btn btn-large btn-info">
+                        <span>立即设置</span>
+                    </button>
+                </div>
+            </div>
+            <!-- /.page-content -->
+        </div>
+        <!-- /.main-content -->
+    </div>
+    <!-- /.main-container-inner -->
+</div>
+<!-- /.main-container -->
+</body>
+</html>

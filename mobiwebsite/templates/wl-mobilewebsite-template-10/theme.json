@@ -1,0 +1,29 @@
+{
+	"header": {
+		},
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate",
+				"applyTo": "*",
+				"styleIndex": 0
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#bd7dfa",
+				"color": "#fff"
+			}, {
+				"bgColor": "#fd8900",
+				"color": "#fff"
+			}, {
+				"bgColor": "#ce3d40",
+				"color": "#fff"
+			}, {
+				"bgColor": "#137b86",
+				"color": "#fff"
+			}
+		]
+	},
+	"footer": {}
+}

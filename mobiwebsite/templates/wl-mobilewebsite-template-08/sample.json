@@ -1,0 +1,28 @@
+{
+	"category": [
+		{
+			"title": "关于我们",
+			"targetUrl": "#"
+		}, {
+			"title": "样照赏析",
+			"targetUrl": "#"
+		}, {
+			"title": "团购套餐",
+			"targetUrl": "#"
+		}, {
+			"title": "优惠活动",
+			"targetUrl": "#"
+		}, {
+			"title": "高端定制",
+			"targetUrl": "#"
+		}, {
+			"title": "在线预约",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "家居@2014",
+		"wlSupportInfo": "demo提供技术支持",
+		"pageBgImageUrl": "images/homebgimage.png"
+	}
+}

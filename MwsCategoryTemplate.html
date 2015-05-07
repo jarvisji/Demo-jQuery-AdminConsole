@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo(freecoder) - 列表模板设置</title>
+        <meta name="description" content="demo(freecoder),微信公众号服务平台，最优化的用户体验和服务。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <style>
+			.tpllist-iphone {
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				list-style-position: inside;
+			}
+			.tpllist-iphone li {
+				float: left;
+				margin: 10px 30px 30px 30px;
+				width: 180px;
+				height: 362px;
+				text-align: center;
+				background: url(images/iphone5s_white.jpg) no-repeat center top;
+				background-size: contain;
+			}
+			.tpllist-iphone li.active {
+				background-image: url(images/iphone5s_black.jpg);
+			}
+			.tpllist-iphone li:hover {
+				background-image: url(images/iphone5s_black.jpg);
+			}
+			.tpllist-iphone li img {
+				position: relative;
+				top: 53px;
+				left: 2px;
+				width: 148px;
+			}
+        </style>
+    </head>
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>列表模板设置</h1>
+
+                        </div><!-- /.page-header -->
+                        <div id="alertPlaceHolder"></div>
+                        <div class="row">
+                            <div class="col-md-12 col-md-offset-1">
+                                <ul class="tpllist-iphone">
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-01.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-02.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-03.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-04.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-05.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-06.jpg"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/mws-template/wl-mws-level2-template-07.jpg"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+    </body>
+</html>

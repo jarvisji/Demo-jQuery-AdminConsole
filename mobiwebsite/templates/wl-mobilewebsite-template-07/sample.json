@@ -1,0 +1,42 @@
+{
+	"category": [
+		{
+			"title": "关于我们",
+			"iconClass": "icon-star",
+			"targetUrl": "#"
+		}, {
+			"title": "企业文化",
+			"iconClass": "icon-flag",
+			"targetUrl": "#"
+		}, {
+			"title": "设计团队",
+			"iconClass": "icon-group",
+			"targetUrl": "#"
+		}, {
+			"title": "案例展示",
+			"iconClass": "icon-copy",
+			"targetUrl": "#"
+		}, {
+			"title": "装修风格",
+			"iconClass": "icon-suitcase",
+			"targetUrl": "#"
+		}, {
+			"title": "最新活动",
+			"iconClass": "icon-bullhorn",
+			"targetUrl": "#"
+		}, {
+			"title": "会员中心",
+			"iconClass": "icon-user",
+			"targetUrl": "#"
+		}, {
+			"title": "联系我们",
+			"iconClass": "icon-comments-alt",
+			"targetUrl": "#"
+		}
+	],
+	"footer": {
+		"siteDesc": "家居@2014",
+		"wlSupportInfo": "demo提供技术支持",
+		"pageBgImageUrl": "images/homebgimage.png"
+	}
+}

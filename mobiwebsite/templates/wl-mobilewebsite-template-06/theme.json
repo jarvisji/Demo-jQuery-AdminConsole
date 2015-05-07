@@ -1,0 +1,51 @@
+{
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate",
+				"applyTo": "0-5"
+			}, {
+				"id": "categoryTemplate-sm-lg",
+				"applyTo": "even",
+				"styleIndex": 6
+			}, {
+				"id": "categoryTemplate-lg-sm",
+				"applyTo": "odd",
+				"styleIndex": 7
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#81c347",
+				"color": "#000000"
+			}, {
+				"bgColor": "#92d0f5",
+				"color": "#000000"
+			}, {
+				"bgColor": "#019c9e",
+				"color": "#000000"
+			}, {
+				"bgColor": "#00a271",
+				"color": "#000000"
+			}, {
+				"bgColor": "#0083b7",
+				"color": "#000000"
+			}, {
+				"bgColor": "#61bba1",
+				"color": "#000000"
+			}, {
+				"bgColor": "#4cb034;",
+				"color": "#000000"
+			}, {
+				"bgColor": "#019c9e",
+				"color": "#000000"
+			}
+		]
+	},
+	"footer": {
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e4e4e4"
+		}
+	}
+}

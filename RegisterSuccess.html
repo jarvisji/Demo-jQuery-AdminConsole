@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>demo（freecoder）- 注册成功</title>
+    <meta name="description" content="demo（freecoder）- 注册成功"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/lib/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/lib/ace.min.css"/>
+
+    <link rel="stylesheet" href="css/freecoder.css"/>
+    <link rel="stylesheet" href="css/mylogin.css"/>
+</head>
+
+<body class="login-layout">
+<div class="main-container">
+    <div class="main-content">
+
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="login-container">
+
+                    <div class="center">
+                        <h1><img src="images/logo.png"/></h1>
+                    </div>
+
+                    <div class="space-6"></div>
+
+                    <div class="position-relative">
+                        <div class="login-box visible widget-box no-border">
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <!--<h4 class=" red lighter bigger"> 恭喜你，注册成功。将在<a  href="#" id="time">
+                                    5</a>秒后跳转到登录页面。 </h4>
+                                    <a href="Login.html">点击这里直接跳转</a>-->
+                                    <h4 class="lighter text-success">注册信息已提交</h4>
+
+                                    <p class="text-success">为了保证服务质量和用户体验，demo目前处于内测阶段，您的注册信息需要通过审核。</p>
+
+                                    <p class="text-success">我们将尽快处理，请关注邮件并保持手机畅通。</p>
+
+                                    <p class="text-success">感谢您对我们的关注和支持！</p>
+                                </div>
+                                <!-- /widget-main -->
+                            </div>
+                            <!-- /widget-body -->
+                        </div>
+                        <!-- /login-box -->
+                    </div>
+                    <!-- /position-relative -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<!-- /.main-container -->
+
+<!-- basic scripts -->
+<script>
+    var i = 5;
+    function startTime() {
+        document.getElementById("time").innerHTML = i;
+        i = i - 1;
+        if (i == 0) {
+            window.location.href = "Login.html";
+        } else {
+            var t = setTimeout('startTime()', 1000);
+        }
+    }
+
+    startTime();
+</script>
+
+</body>
+</html>

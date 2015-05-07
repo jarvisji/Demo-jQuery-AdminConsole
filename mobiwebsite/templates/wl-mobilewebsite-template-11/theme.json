@@ -1,0 +1,49 @@
+{
+	"category": {
+		"template": [
+			{
+				"id": "categoryTemplate01",
+				"applyTo": "even",
+				"styleIndex": 0
+			},	{
+				"id": "categoryTemplate02",
+				"applyTo": "odd",
+				"styleIndex": 1
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#7ccfeb",
+				"color": "#fff",
+				"categorytextClass": "wltpl_category_title01",
+				"categoryimgClass": "wltpl_categoryborder01"
+			
+			}, {
+				"bgColor": "#b9dbf0",
+				"color": "#fff",
+				"categorytextClass": "wltpl_category_title02",
+				"categoryimgClass": "wltpl_categoryborder02"
+				
+			}, {
+				"bgColor": "#9fe4e1",
+				"color": "#fff",
+				"categorytextClass": "wltpl_category_title01",
+				"categoryimgClass": "wltpl_categoryborder01"
+			
+			}, {
+				"bgColor": "#8bcabe",
+				"color": "#fff",
+				"categorytextClass": "wltpl_category_title02",
+				"categoryimgClass": "wltpl_categoryborder02"
+			
+			}, {
+				"bgColor": "#8cc3da",
+				"color": "#fff",
+				"categorytextClass": "wltpl_category_title01",
+				"categoryimgClass": "wltpl_categoryborder01"
+			
+			}
+		]
+	},
+	"footer": {}
+}

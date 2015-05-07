@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title> demo（freecoder）- 咖啡模板</title>
+        <link rel="stylesheet" href="../../css/lib/bootstrap.css" />
+        <link rel="stylesheet" href="../../css/lib/jquery-ui-1.10.4.css" />
+        <link rel="stylesheet" href="../../css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="../../css/wlMwsTemplate.css" />
+        <link rel="stylesheet" href="index.css" />
+        <script data-main="../../scripts/tplmain" src="../../scripts/require.js"></script>
+
+    </head>
+    <body>
+
+        <div id="wltplContainer">
+            <div class="wltpl_container">
+
+                <div name="slide" class="wltpl_item wltpl_item_top">
+
+                    <script type="text/html" id="carouselTemplate">
+                        <div id="wltpl_carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators cover_dot">
+                        </ol>
+                        <!-- Wrapper for slides -->
+
+                        <div class="carousel-inner " style="overflow-y: hidden;" wltpl_data='{"ratio":1.7}'>
+                        </div>
+
+                        </div>
+                    </script>
+
+                    <script type="text/html" id="carouselIndicatorTemplate">
+                        <li data-target="#wltpl_carousel"></li>
+                    </script>
+
+                    <script type="text/html" id="carouselItemTemplate">
+                        <div class="item">
+                        <a href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+                        <img data-src="imageUrl">
+                        <div class="carousel-caption" style="bottom:0px;">
+                        <div class="cover_text" data-content="title" data-template-bind='[{"attribute":"style", "value":"color", "formatter":"appendStyleFormatter", "formatOptions":{"cssProp":"color"}}]'></div>
+                        <div style="width:35%;"></div>
+                        </div>
+                        </a>
+                        </div>
+                    </script>
+
+                </div>
+
+                <div name="category">
+
+                    <script type="text/html" id="phoneTemplate">
+                        <div class="wltpl_item wltpl_font_30 wltpl_item_col_1" wltpl_data='{"ratio":4.53}'>
+                        <a href="#" data-template-bind='[{"attribute": "href", "value": "dail", "formatter": "dailLinkFormatter"}]'>
+                        <div class="wltpl_phonebackground wltpl_font_ratio">
+                        <i class="icon-2x wltpl_iconphone icon-phone"></i>
+                        <span class="wltpl_phonenum" data-content="dail"></span>
+                        </div>
+                        </a>
+                        </div>
+                    </script>
+
+                    <script type="text/html" id="categoryTemplate">
+                        <div class="wltpl_item wltpl_font_30 " wltpl_data='{"ratio":1}'data-template-bind='[{"attribute":"class", "value":"layoutClass", "formatter": "appendClassFormatter"}]'>
+                        <a class="wltpl_font_ratio" href="#" data-template-bind='[{"attribute": "href", "value": "targetUrl"}]'>
+                        <div class="wltpl_categoryborder">
+                        <img data-src="imageUrl" class="wltpl_categoryborder_img"/>
+                        </div>
+                        <span class="wltpl_category_title text_overflow" data-content="title"></span>
+                        </a>
+                        </div>
+                    </script>
+
+                </div>
+
+                <div name="footer" class="wltpl_footer wltpl_font_24">
+                    <script type="text/html" id="footerTemplate">
+                        <div class="text-center wltpl_font_ratio">
+                        <span data-content="siteDesc"></span><br/>
+                        <span data-content="wlSupportInfo"></span>
+                        </div>
+                    </script>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+/* Override ace style (ace.min.css:3877), used by our color-picker. */
+.dropdown-colorpicker > .dropdown-menu {
+	top: 90%;
+	left: -275px;
+	padding: 4px;
+	min-width: 370px;
+	max-width: 370px;
+}
+
+/* Overrid bootstrap dialog style (bootstrap.min.css:4193). */
+.modal-dialog {
+	width: 90%;
+}
+
+/* 用于表示列表项的选中状态  */
+.ace-thumbnails > li > :first-child > .text.display {
+	opacity: 1;
+}
+
+.wizard-item {
+  padding: 10px 4px;
+  border-bottom: 1px dotted #D0D8E0;
+  position: relative;
+  border-left: 1px dotted #FFF;
+  border-right: 1px dotted #FFF;
+}
+.wizard-item:first-child {
+  border-top: 1px dotted transparent;
+}
+.wizard-item:first-child:hover {
+  border-top-color: #D0D8E0;
+}
+.wizard-item:hover {
+  background-color: #F4F9FD;
+  border-left: 1px dotted #D0D8E0;
+  border-right: 1px dotted #D0D8E0;
+}
+
+.wizard-item img {
+  border: 2px solid #C9D6E5;
+  max-width: 240px;
+  margin-right: 10px;
+  margin-left: 0px;
+  box-shadow: none;
+}
+.wizard-item .tools {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  display: none;
+}
+.wizard-item:hover .tools {
+  display: block;
+}

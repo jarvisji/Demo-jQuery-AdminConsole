@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 音频</title>
+        <meta name="description" content="demo（freecoder）- 音频" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1> 音频 </h1>
+                            <div class="wl-header-search">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"  data-backdrop="static" data-target="#modalAdd">
+                                            <i class="icon-new"></i><span>新增</span>
+                                        </button> &nbsp;</span>
+                                    <input type="text" class="form-control"  id="searchValue" placeholder="搜索" />
+                                     <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" id="search">
+                                            <i class="icon-new"></i><span>搜索</span>
+                                        </button> &nbsp;</span>
+                                </div>
+                            </div>
+                        </div><!-- /.page-header -->
+                        <div id="alertPlaceHolder"></div>
+
+                        <div id="audioListContainer"></div>
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">编辑音频素材</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form_bg center-block">
+                                    <form class="form-horizontal" id="AudioForm"  role="form" method="post" action="./php/fileUpload.php" >
+                                        <div class="form-group">
+                                            <label for="fileMultiple" class="help-block">音频上传（格式为mp3,wav,wma,amr，限制为5M）</label>
+                                            <input type="hidden" id="url"  name="url">
+                                            <input type="file" id="fileMultiple" name="fileUploader"  />
+                                            <div class="help-inline"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="hidden" id="fileName"  name="fileName">
+                                            <label for="memo" class="help-block">音频标题</label>
+                                            <textarea id="memo" name="memo" class="autosize-transition form-control"  placeholder="可选，不超过50个字" ></textarea>
+                                            <div class="help-inline"></div>
+                                            <hr/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <span>关闭</span>
+                        </button>
+                        <button id="btnSubmit" type="button" class="btn btn-primary">
+                            <span>保存</span>
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </body>
+</html>

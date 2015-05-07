@@ -1,0 +1,18 @@
+<body>
+
+	{{#each articles}}
+	<a href="Content.html?site={{wlsWxAccountId}}&id={{id}}">
+	<div class="row category_row category_border_bottom wltpl_font_32">
+	  <div class="wltpl_font_ratio">	
+		<div>
+			{{title}}
+		</div><br/>
+		<div class="small text_color_gray">
+			{{summary}}
+		</div>
+		</div>
+	</div>
+	</a>
+	{{/each}}
+
+</body>

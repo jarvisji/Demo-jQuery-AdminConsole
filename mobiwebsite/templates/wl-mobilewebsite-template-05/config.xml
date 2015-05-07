@@ -1,0 +1,70 @@
+<!--咖啡模板-->
+<template name="wl_mobilewebsite_template05">
+	<description>
+		<![CDATA[此模板适用于咖啡店、茶楼等有展示图片需求的商家。模板样式基本固定，操作起来比较简单，建议首页分类项设置为3的倍数，6项显示效果较好。]]>
+	</description>
+	<configuration>
+		<steps>
+			<step name="slide" title="幻灯片">
+				<description>
+					<![CDATA[1.设置幻灯片，最多可上传5张。建议尺寸（640 x 380像素）。<br/>2.链接地址以http://开头。 ]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="幻灯片列表" maxRepeats="5" sortable="true" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_image" name="imageUrl"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑幻灯片" sortable="false" templateId="fieldSet_fieldsContainer">
+						 <field templateId="formGroup_textInput_fileUploadButton" name="imageUrl" label="幻灯片图片"/>
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="可选，不超过20个字 " validation='{"maxlength":"20"}' validationMsg='{"maxlength":"不能超过20个字"}' />
+						<field templateId="formGroup_textInput_button_colorpicker" name="color" label="前景色" placeholder="请选择颜色" actionTitle="选择颜色" actionValue="browseColor" validation="required"/>
+						<field templateId="formGroup_textInput" name="targetUrl" label="链接" placeholder="可选 " validation='{"url":true}' validationMsg='{"url":"请输入http://开头的链接格式"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			<step name="category" title="分类">
+				<description>
+					<![CDATA[分类栏目管理<br/>1.封面图片建议尺寸（160 x 160像素)。<br/>2.链接地址以http://开头。]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="首页分类设置" maxRepeats="0" sortable="true" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="标题：" name="title"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑分类" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="title" label="标题" placeholder="必填，不超过20个字 " validation='{"required":true,"maxlength":"20"}' validationMsg='{"required":"请输入标题","maxlength":"不能超过20个字"}' />
+						 <field templateId="formGroup_textInput_fileUploadButton" name="imageUrl" label="封面图片"/>
+												<field templateId="formGroup_textInput_button_material" name="targetUrl" label="链接" placeholder="必填" actionTitle="选择链接目标" actionValue="sit" validation='{"required":true, "url":true}' validationMsg='{"required":"请输入链接或选择目标", "url":"链接地址以http://开头"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+			<step name="footer" title="其它">
+				<description>
+					<![CDATA[1.设置页脚版权信息、快捷拨号。<br/>2.请输入正确的电话号码，确保拨号功能正常。 ]]>
+				</description>
+				<view>
+					<fieldSet fsTitle="页脚设置" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_label_text" label="版权信息：" name="siteDesc"/>
+						<field templateId="formElement_line" />
+						<field templateId="formGroup_label_text" label="快捷拨号：" name="dail"/>
+						<field templateId="actionButtons_edit_delete" />
+					</fieldSet>
+				</view>
+				<edit>
+					<fieldSet fsTitle="编辑页脚" maxRepeats="1" sortable="false" templateId="fieldSet_fieldsContainer">
+						<field templateId="formGroup_textInput" name="siteDesc" label="版权信息" placeholder="可选，不超过20个字" validation='{"maxlength":"20"}' validationMsg='{"maxlength":"不能超过20个字"}' />
+						<field templateId="formElement_line" />
+						<field templateId="formGroup_textInput" name="dail" label="快捷拨号" placeholder="必填" validation="required" validationMsg='{"required":"请输入电话号码"}' />
+						<field templateId="actionButtons_save_return" />
+					</fieldSet>
+				</edit>
+			</step>
+		</steps>
+	</configuration>
+</template>

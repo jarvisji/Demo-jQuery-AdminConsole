@@ -1,0 +1,52 @@
+{
+	"slide": [
+		{
+			"title": "便利店模板",
+			"imageUrl": "images/slide-1.png",
+			"targetUrl": "#"
+		}, {
+			"title": "",
+			"imageUrl": "images/slide-2.jpg",
+			"targetUrl": "#"
+		}
+	],
+	"category": [
+		{
+			"title": "新品上市",
+			"iconClass": "icon-bullhorn",
+			"targetUrl": "#"
+		}, {
+			"title": "生鲜水果",
+			"iconClass": "",
+			"targetUrl": "#"
+		}, {
+			"title": "粮油副食",
+			"iconClass": "",
+			"targetUrl": "#"
+		}, {
+			"title": "饮料酒水",
+			"iconClass": "icon-glass",
+			"targetUrl": "#"
+		}, {
+			"title": "外送服务",
+			"iconClass": "icon-truck",
+			"targetUrl": "#"
+		}, {
+			"title": "会员中心",
+			"iconClass": "icon-user",
+			"targetUrl": "#"
+		}, {
+			"title": "热门商品",
+			"targetUrl": "#",
+			"imageUrl": "images/category01.jpg"
+		}, {
+			"title": "优惠促销",
+			"targetUrl": "#",
+			"imageUrl": "images/category02.jpg"
+		}
+	],
+	"footer": {
+		"siteDesc": "便利店模板@2014",
+		"wlSupportInfo": "demo提供技术支持"
+	}
+}

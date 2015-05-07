@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>freecoder</title>
+        <meta name="description" content="overview &amp; stats" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <style>
+			/* override ace style */
+			.profile-picture {
+				width: 100%;
+				text-align: center;
+			}
+			.profile-picture img {
+				width: 100%;
+			}
+        </style>
+    </head>
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="page-content">
+                <div class="page-header">
+                    <h1>欢迎</h1>
+                </div><!-- /.page-header -->
+                <div id="serviceAlert" class="alert alert-block alert-danger hidden">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <i class="icon-remove"></i>
+                    </button>
+                    您的服务即将于<span id="serviceEndDate"></span>到期，请及时联系客服续费。如有疑问或需要帮助，请拨打电话：400-805-1619。
+                </div>
+                <div id="alertPlaceHolder"></div>
+
+                <div id="divBindAccount" class="row hidden">
+                    <div class="col-md-12"><h2>还没有绑定公众号？</h2>
+                        <a href="WXPublic.html">
+                        <button class="btn btn-warning btn-lg">
+                            <span>赶快添加</span>
+                        </button> </a>
+                    </div>
+                </div>
+                <div class="space"></div>
+                <div id="wxAccountInfoContainer"></div>
+            </div><!-- /.page-content -->
+        </div><!-- /.main-container -->
+    </body>
+</html>

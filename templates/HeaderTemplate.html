@@ -1,0 +1,44 @@
+<div class="navbar navbar-default" id="navbar">
+    <div class="navbar-container container" id="navbar-container">
+        <div class="navbar-header pull-left" role="navigation">
+            <a href="./" class="navbar-brand"> <img src="images/freecoder-logo-small-white.png"/> </a><!-- /.brand -->
+        </div>
+
+        <!-- Weixin account list -->
+        <div class="navbar-header" role="navigation">
+            <ul class="nav ace-nav" id="wxAccountListContainer">
+                <!-- jquery template -->
+            </ul>
+        </div>
+
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> <img id="userImage" class="nav-user-photo" /> <span id="userName" class="user-info" style="margin-top:9px;"></span> <i class="icon-caret-down"></i></a>
+
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="UserBasicInformation.html" > <i class="icon-cog"></i> 基本信息 </a>
+                        </li>
+
+                        <li>
+                            <a href="WXPublicList.html"> <i class="icon-user"></i> 公众号管理 </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="./php/Login.php?logout"> <i class="icon-off"></i> 注销 </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul><!-- /.ace-nav -->
+        </div><!-- /.navbar-header -->
+    </div><!-- /.container -->
+</div>
+<script type="text/html" id="navbar_account_template">
+    <li class="light-blue" data-link="id" data-format="r_php_link_templateFormatter" data-format-options="wxAccountId" data-format-target="link" data-template-bind='[{"attribute":"id", "value":"id"}]'>
+    <img class="nav-user-photo" data-src="avatar"  />
+    <span class="user-info" data-content="name" style="margin-top:9px;"></span>
+    </li>
+</script>

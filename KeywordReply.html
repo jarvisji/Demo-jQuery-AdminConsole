@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo(freecoder) - 关键词回复</title>
+        <meta name="description" content="demo(freecoder),微信公众号服务平台，最优化的用户体验和服务。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+
+    </head>
+    <body>
+        <div id="headerPlaceHolder"></div>
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>关键词回复</h1>
+                            <div class="wl-header-search">
+                                <button id="btnNewReply" class="btn btn-primary btn-sm btn-block">
+                                    <i class="icon-new"></i><span>新增回复</span>
+                                </button>
+                            </div>
+                        </div><!-- /.page-header -->
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div id="alertPlaceHolder"></div>
+                                <div id="keywordGroupListContainer"></div>
+                            </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+        <script type="text/html" id="keywordListTemplate">
+            <div class="widget-box collapsed" data-id="keywordGroup">
+
+            <div class="widget-header">
+            <h5>关键词：<span data-content="keyword"></span></h5>
+            <div class="widget-toolbar">
+            <a href="#" data-action="collapse"> <div style="margin: 10px;"><i class="icon-chevron-down bigger-125"></i></div> </a>
+            </div>
+            </div>
+
+            <div class="widget-body">
+            <div class="widget-body-inner" style="display: block;">
+            <div class="widget-main">
+            <div class="row" style="position: relative">
+            <!--<div class="col-md-7" name="keywordListContainer"></div>-->
+            <div class="col-md-10 center-block" name="previewContainer"></div>
+            <div class="col-md-2" style="position: absolute; bottom: 0px;right:0px">
+            <div class="action-buttons">
+            <a href="#" data-action="edit"> <i class="icon-pencil bigger-150"></i> </a>&nbsp;&nbsp;
+            <a href="#" data-action="delete"> <i class="icon-remove bigger-150"></i> </a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            </div>
+        </script>
+        <script type="text/html" id="keywordEditTemplate">
+            <form>
+            <div class="row well">
+            <div class="form-group col-md-7">
+            <label for="keywords">每个关键词最长30个字符，最多输入10条关键词：</label>
+            <div>
+            <div id="keywords" data-type='wl-tags-input' placeholder="输入关键词"></div>
+            </div>
+            <div class="help-inline"></div>
+            <div class="space"></div>
+            <div class="btn-group pull-right">
+            <button id="btnSelectMaterial" type="button" class="btn btn-primary btn-sm">
+            <i class="icon-check"></i><span>选择素材</span>
+            </button>
+            <button id="btnCancel" type="button" class="btn btn-default btn-sm">
+            <i class="icon-remove-sign"></i><span>取消</span>
+            </button>
+            <button id="btnSave" type="button" class="btn btn-success btn-sm">
+            <i class="icon-save"></i><span>保存</span>
+            </button>
+            </div>
+            </div>
+
+            <div class="form-group col-sm-5">
+            <span>已选素材：</span>
+            <div id="materialPreview"></div>
+            <div class="help-inline"></div>
+            </div>
+            </div>
+            </form>
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,25 @@
+{
+	"slide": [
+		{
+			"title": "餐饮图片",
+			"imageUrl": "images/slide-1.png",
+			"targetUrl": "#"
+		}
+	],
+	"category": [
+		{
+			"title": "关于餐饮",
+			"targetUrl": "#",
+			"imageUrl": "images/categoryimg01.png"
+		} , {
+
+			"title": "菜单浏览",
+			"targetUrl": "#",
+			"imageUrl": "images/categoryimg02.png"
+		}
+	],
+	"footer": {
+		"siteDesc": "面包新语@2014",
+		"wlSupportInfo": "demo提供技术支持"
+	}
+}

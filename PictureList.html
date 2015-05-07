@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>demo（freecoder）- 图片</title>
+        <meta name="description" content="demo（freecoder）-图片" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css"  />
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/lib/colorbox.css" />
+        <link rel="stylesheet" href="css/lib/ace.min.css" />
+
+        <link rel="stylesheet" href="css/freecoder.css" />
+        <link rel="stylesheet" href="css/GraphicMaterial.css" />
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+    </head>
+
+    <body>
+        <div id="headerPlaceHolder"></div>
+
+        <div class="main-container container" id="main-container">
+            <div class="main-container-inner">
+                <!--menu start-->
+                <div id="menuPlaceHolder"></div>
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1> 图片 <small></h1>
+                            <div class="wl-header-search">
+                                <div class="input-group">
+                                    <span class="input-group-btn">&nbsp;</span>
+                                    <input type="text" class="form-control"  id="searchValue" placeholder="搜索" />
+                                     <span class="input-group-btn">
+                                        <button class="btn btn-primary btn-sm" id="search">
+                                            <i class="icon-new"></i><span>搜索</span>
+                                        </button> &nbsp;</span>
+                                </div>
+                            </div>
+                        </div><!-- /.page-header -->
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                            	<div class="alert alert-block alert-success">
+                            		<button class="close" data-dismiss="alert" type="button">
+									<i class="icon-remove"></i>
+									</button>
+                            		图片上传(支持jpg,png,gif，限制为2M)
+                            	</div>
+                                <div id="alertPlaceHolder"></div>
+                                <div class="thumbnail_img_add" >
+                                    <form method="post"  action="./php/fileUpload.php">
+                                        <input type="hidden" id="photUrl"  name="photUrl">
+                                        <input type="file" name="fileUploader" id="fileMultiple" />
+                                    </form>
+                                </div>
+                                <div>
+                                    &nbsp;
+                                </div>
+                                <ul class="ace-thumbnails" id="imageList"></ul>
+                                <script type="text/html" id="imageListTemplate">
+                                    <li class="thumbnail_PL_pic"  data-template-bind='[{"attribute":"id", "value":"id"}]'>
+                                    <a class="cboxElement" data-template-bind='[{"attribute": "href", "value": "imageUrl"}]' data-rel="colorbox">
+                                    <div class="Picimg_material_preview" ><img alt="160x160" data-src="imageUrl"><span></span></div>
+                                    <div class="text">
+                                    <div class="inner" data-content="fileName"></div>
+                                    </div>
+                                    </a>
+
+                                    <div class="tools tools-bottom">
+                                    <a href="#" name="aDeleteImage">
+                                    <i class="icon-remove"></i>
+                                    </a>
+                                    </div>
+                                    </li>
+                                </script>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div><!-- /.main-content -->
+            </div><!-- /.main-container-inner -->
+        </div><!-- /.main-container -->
+        <script></script>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+{
+	"slide": [],
+	"category": {
+		"template": [
+			{
+				"id": "ItemTemplate01",
+				"applyTo": "even",
+				"styleIndex": 0
+			}, {
+				"id": "ItemTemplate02",
+				"applyTo": "odd",
+				"styleIndex": 1
+			}
+		],
+		"style": [
+			{
+				"bgColor": "#fb8f5e",
+				"color": "#000000",
+				"imgborderleftClass": "wltpl_left_pictureframe"
+			}, {
+				"bgColor": "#00aaa9",
+				"color": "#000000",
+				"imgborderrightClass": "wltpl_right_pictureframe"
+			}
+		]
+	},
+	"footer": {
+		"style": {
+			"color": "#000",
+			"pageBgColor": "#e0dcdb"
+		}
+	}
+}
